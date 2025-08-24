@@ -134,7 +134,7 @@ body::before {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 2rem;
+    padding: 80px 2rem 0 2rem;
     position: relative;
 }
 
@@ -591,6 +591,10 @@ body::before {
     .nav-menu li {
         margin: 1rem 0;
     }
+
+    .hero {
+        padding-top: 120px;
+    }
     
     .hero-container {
         grid-template-columns: 1fr;
@@ -643,6 +647,10 @@ body::before {
 @media (max-width: 480px) {
     .navbar {
         padding: 1rem;
+    }
+
+    .hero {
+        padding-top: 100px;
     }
     
     .hero,
