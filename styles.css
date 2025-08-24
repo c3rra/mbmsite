@@ -559,6 +559,11 @@ body::before {
     opacity: 0.7;
 }
 
+.footer-bottom a {
+    color: #1c1f26;
+    text-decoration: none; 
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .hamburger {
