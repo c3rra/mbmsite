@@ -143,3 +143,39 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
 });
+
+
+// FAQ Toggle Function
+function toggleFaq(element) {
+    // Get the answer div (next sibling)
+    const answer = element.nextElementSibling;
+    const icon = element.querySelector('.faq-icon');
+
+    // Close all other FAQ items
+    const allAnswers = document.querySelectorAll('.faq-answer');
+    const allIcons = document.querySelectorAll('.faq-icon');
+
+    allAnswers.forEach(ans => {
+        if (ans !== answer) {
+            ans.classList.remove('active');
+        }
+    });
+
+    allIcons.forEach(ic => {
+        if (ic !== icon) {
+            ic.classList.remove('active');
+            ic.textContent = '+';
+        }
+    });
+
+    // Toggle current FAQ item
+    if (answer.classList.contains('active')) {
+        answer.classList.remove('active');
+        icon.classList.remove('active');
+        icon.textContent = '+';
+    } else {
+        answer.classList.add('active');
+        icon.classList.add('active');
+        icon.textContent = '−';
+    }
+}
