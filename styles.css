@@ -593,7 +593,7 @@ body::before {
 }
 
 .faq-item {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     border-radius: 12px;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.6);
@@ -654,7 +654,7 @@ body::before {
 }
 
 .faq-answer-content {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     line-height: 1.6;
     opacity: 0.8;
 }
@@ -684,6 +684,14 @@ body::before {
         height: 80%;
         max-width: 150px;
         max-height: 150px;
+    }
+
+    .faq-cta {
+    text-align: center;
+    }
+
+        .faq-cta-padding {
+    padding-top: 2rem;
     }
 
 @media (max-width: 480px) {
