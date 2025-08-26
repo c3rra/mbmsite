@@ -752,7 +752,99 @@ body::before {
 }
 
 
+/* Privacy Policy Page Styles */
+.privacy-section {
+    padding: 8rem 2rem 4rem 2rem;
+    min-height: 80vh;
+}
 
+.privacy-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 3rem;
+}
+
+.privacy-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1c1f26;
+    text-align: center;
+}
+
+.privacy-updated {
+    text-align: center;
+    font-size: 1rem;
+    color: #1c1f26;
+    opacity: 0.6;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.privacy-section-content {
+    margin-bottom: 2.5rem;
+}
+
+.privacy-section-content h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1c1f26;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    border-bottom: 2px solid #f7b40d;
+    padding-bottom: 0.5rem;
+}
+
+.privacy-section-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1c1f26;
+    margin-bottom: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.privacy-section-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1c1f26;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.privacy-section-content ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.privacy-section-content ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1c1f26;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.privacy-section-content ul li::marker {
+    color: #f7b40d;
+}
+
+.privacy-section-content a {
+    color: #f7b40d;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.privacy-section-content a:hover {
+    color: #e6a00b;
+    text-decoration: underline;
+}
+
+.privacy-section-content strong {
+    color: #1c1f26;
+    font-weight: 600;
+}
 
 
 
@@ -884,7 +976,35 @@ body::before {
     .partners-list li {
         font-size: 1rem;
     }
+
+/* PRIVACY Mobile Responsive */
+    .privacy-section {
+        padding: 6rem 1rem 3rem 1rem;
+    }
+    
+    .privacy-container {
+        padding: 3rem 2rem;
+    }
+    
+    .privacy-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .privacy-section-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .privacy-section-content h3 {
+        font-size: 1.125rem;
+    }
+
 }
+
+
+
+
+
+
 
 
 @media (max-width: 480px) {
@@ -932,7 +1052,14 @@ body::before {
         font-size: 1.25rem;
     }
 
-
+    /* PRIVACY */
+    .privacy-container {
+        padding: 2rem 1.5rem;
+    }
+    
+    .privacy-content h1 {
+        font-size: 2rem;
+    }
 
 }
 
