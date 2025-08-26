@@ -670,6 +670,97 @@ body::before {
     text-decoration: none; 
 }
 
+/* Partners Page Specific Styles */
+.partners-hero {
+    text-align: center;
+}
+
+.partners-content {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    padding: 4rem 3rem;
+    
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(247, 180, 13, 0.4);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+}
+
+.partners-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #1c1f26, #23262e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.partners-subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1c1f26;
+    margin-bottom: 0.5rem;
+}
+
+.partners-tagline {
+    font-size: 1.2rem;
+    color: #1c1f26;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.partners-description {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.partners-description p {
+    font-size: 1.2rem;
+    color: #1c1f26;
+    opacity: 0.8;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.partners-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.partners-list li {
+    font-size: 1.1rem;
+    color: #1c1f26;
+    opacity: 0.8;
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.partners-list li::before {
+    content: '•';
+    color: #f7b40d;
+    font-weight: 600;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .hamburger {
@@ -771,7 +862,30 @@ body::before {
         max-width: 150px;
         max-height: 150px;
     }
+
+
+/* PARTNERS Mobile Responsive */
+    .partners-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .partners-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .partners-tagline {
+        font-size: 1rem;
+    }
+    
+    .partners-description p {
+        font-size: 1rem;
+    }
+    
+    .partners-list li {
+        font-size: 1rem;
+    }
 }
+
 
 @media (max-width: 480px) {
     .navbar {
@@ -806,6 +920,20 @@ body::before {
         max-width: 120px;
         max-height: 120px;
     }
+
+
+    /* PARTNERS */
+
+    .partners-content h1 {
+        font-size: 2rem;
+    }
+    
+    .partners-subtitle {
+        font-size: 1.25rem;
+    }
+
+
+
 }
 
 /* Smooth scrolling */
