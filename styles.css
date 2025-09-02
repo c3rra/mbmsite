@@ -53,6 +53,17 @@ body::before {
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
 }
 
+/* MAKING CARD SECTIONS INTO LINKS */ 
+.service-card-link {
+    text-decoration: none;
+    display: block;
+}
+
+.service-card-link:hover .service-card {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 40px rgba(247, 180, 13, 0.3);
+}
+
 /* Navigation */
 .navbar {
     position: fixed;
