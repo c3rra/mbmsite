@@ -912,6 +912,14 @@ body::before {
     color: #1c1f26;
 }
 
+.mastery-hero-h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1c1f26;
+    margin-bottom: 1.5rem;
+    margin-top: -0.5rem;
+}
+
 .mastery-hero h1 .highlight {
     background: linear-gradient(135deg, #f7b40d, #ffc944);
     padding: 0 0.5rem;
@@ -1594,6 +1602,10 @@ body::before {
     .hero-content h1 {
         font-size: 2.5rem;
     }
+
+    .mastery-hero-h2 {
+        font-size: 2rem;
+    }
     
     .logo-container {
         width: 250px;
@@ -1752,6 +1764,49 @@ body::before {
 
     .mastery-final-cta h2 {
         font-size: 2rem;
+    }
+
+    /* Creator Table Mobile Card Stack */
+    .mastery-creator-table,
+    .mastery-creator-table thead,
+    .mastery-creator-table tbody,
+    .mastery-creator-table th,
+    .mastery-creator-table td,
+    .mastery-creator-table tr {
+        display: block;
+    }
+
+    .mastery-creator-table thead {
+        display: none;
+    }
+
+    .mastery-creator-table tr {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(247, 180, 13, 0.3);
+        border-radius: 15px;
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .mastery-creator-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.6rem 0;
+        border-bottom: 1px solid rgba(247, 180, 13, 0.15);
+        background: transparent;
+    }
+
+    .mastery-creator-table td:last-child {
+        border-bottom: none;
+    }
+
+    .mastery-creator-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #f7b40d;
+        margin-right: 1rem;
     }
 
 }
