@@ -53,6 +53,14 @@ body::before {
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
 }
 
+/*make headshot image circlular*/
+
+.circleheadshot {
+    width: 300px;       
+    height: 300px;     
+    border-radius: 50%;
+}
+
 /* MAKING CARD SECTIONS INTO LINKS */ 
 .service-card-link {
     text-decoration: none;
