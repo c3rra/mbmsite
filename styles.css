@@ -1023,6 +1023,13 @@ body::before {
     background: rgba(255, 255, 255, 0.8);
 }
 
+/* Ownership column emphasis - Desktop */
+.mastery-creator-table td:last-child {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #f7b40d;
+}
+
 /* Mastery Transformation Section */
 .mastery-transformation {
     padding: 5rem 2rem;
@@ -1238,6 +1245,37 @@ body::before {
     border-radius: 0 10px 10px 0;
     margin-bottom: 1rem;
 }
+
+/* Core Program item boxes */
+.mastery-core-item {
+    background: rgba(255, 255, 255, 0.15);
+    border-left: 3px solid #fff9f0;
+    padding: 1.25rem;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 1rem;
+    color: #fff9f0;
+    font-size: 1rem;
+}
+
+.mastery-core-item strong {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #fff9f0;
+}
+
+.mastery-core-item p {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    opacity: 0.8;
+    color: #fff9f0;
+}
+
+.mastery-core-value {
+    font-size: 0.85rem;
+    color: #fff9f0;
+    font-weight: 600;
+}
+
 
 .mastery-bonus-item strong {
     display: block;
@@ -1467,6 +1505,7 @@ body::before {
 
 .mastery-final-cta .btn {
     margin-top: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .mastery-spots-remaining {
