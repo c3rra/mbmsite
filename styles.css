@@ -1725,6 +1725,14 @@ body::before {
         font-size: 0.8rem;
     }
 
+        .nav-container {
+        gap: 1rem;
+    }
+
+    .navbar .logo {
+        font-size: 1.1rem;
+    }
+
 
 /* PARTNERS Mobile Responsive */
     .partners-content h1 {
