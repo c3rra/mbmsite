@@ -1714,6 +1714,17 @@ body::before {
         max-height: 150px;
     }
 
+        /* Fix hero padding for fixed navbar */
+    .mastery-hero {
+        padding-top: 120px;
+    }
+
+    /* Nav button smaller on mobile */
+    .navbar .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
 
 /* PARTNERS Mobile Responsive */
     .partners-content h1 {
@@ -1899,6 +1910,16 @@ body::before {
         max-height: 120px;
     }
 
+        /* Even smaller nav button on very small screens */
+    .navbar .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    /* More hero padding on smallest screens */
+    .mastery-hero {
+        padding-top: 100px;
+    }
 
     /* PARTNERS */
 
@@ -1931,7 +1952,6 @@ body::before {
     .mastery-scarcity-badge {
         font-size: 0.8rem;
         padding: 0.5rem 1rem;
-
     }
 
     .mastery-week-card {
