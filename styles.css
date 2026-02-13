@@ -888,11 +888,11 @@ body::before {
 
 /* Mastery Hero Section */
 .mastery-hero {
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 2rem;
+    padding: 100px 2rem 4rem 2rem;
     text-align: center;
 }
 
@@ -1716,7 +1716,7 @@ body::before {
 
         /* Fix hero padding for fixed navbar */
     .mastery-hero {
-        padding: 120px 2rem 4rem 2rem;
+        padding: 140px 2rem 4rem 2rem;
     }
 
     /* Nav button smaller on mobile */
@@ -1920,7 +1920,7 @@ body::before {
 
     /* More hero padding on smallest screens */
     .mastery-hero {
-        padding-top: 100px;
+        padding: 130px 1rem 3rem 1rem;
     }
 
     /* PARTNERS */
@@ -1943,9 +1943,7 @@ body::before {
     }
 
     /* MASTERY */
-    .mastery-hero {
-        padding: 3rem 1rem;
-    }
+
 
     .mastery-hero h1 {
         font-size: 2rem;
