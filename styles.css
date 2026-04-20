@@ -314,6 +314,11 @@ body::before {
     padding: 4rem 2rem;
 }
 
+/* Spacing between all direct children of cta-container */
+.cta-container > * + * {
+    margin-top: 1.5rem;
+}
+
 .cta-container h2 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -594,8 +599,67 @@ body::before {
 
 /* MASTERY PROGRAM */
 
+.thankyou-testimonials {
+    margin-top: 3rem;
+    text-align: left;
+}
 
+.thankyou-testimonials h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1c1f26;
+    margin-bottom: 2rem;
+    text-align: center;
+}
 
+.nmp-testimonials-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nmp-testimonial-card {
+    background: #fffdf5;
+    border: 3px solid #f7b40d;
+    border-radius: 16px;
+    padding: 1rem 1.25rem;
+    box-shadow: 8px 8px 0px #1c1f26;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nmp-quote-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #1c1f26;
+    margin: 0;
+    display: inline;
+}
+
+.nmp-byline {
+    font-style: italic;
+    font-weight: 700;
+    color: #1c1f26;
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .nmp-testimonial-card {
+        padding: 1.25rem;
+    }
+
+    .nmp-quote-text {
+        font-size: 1rem;
+    }
+
+    .thankyou-testimonials h3 {
+        font-size: 1.5rem;
+    }
+}
 
 
 
@@ -1284,7 +1348,6 @@ body::before {
     font-weight: 600;
 }
 
-
 .mastery-bonus-item strong {
     display: block;
     margin-bottom: 0.4rem;
@@ -1714,7 +1777,7 @@ body::before {
         max-height: 150px;
     }
 
-        /* Fix hero padding for fixed navbar */
+    /* Fix hero padding for fixed navbar */
     .mastery-hero {
         padding: 140px 2rem 4rem 2rem;
     }
@@ -1725,7 +1788,7 @@ body::before {
         font-size: 0.8rem;
     }
 
-        .nav-container {
+    .nav-container {
         gap: 1rem;
     }
 
@@ -1733,8 +1796,7 @@ body::before {
         font-size: 1.1rem;
     }
 
-
-/* PARTNERS Mobile Responsive */
+    /* PARTNERS Mobile Responsive */
     .partners-content h1 {
         font-size: 2.5rem;
     }
@@ -1755,7 +1817,7 @@ body::before {
         font-size: 1rem;
     }
 
-/* PRIVACY Mobile Responsive */
+    /* PRIVACY Mobile Responsive */
     .privacy-section {
         padding: 6rem 1rem 3rem 1rem;
     }
@@ -1776,7 +1838,7 @@ body::before {
         font-size: 1.125rem;
     }
 
-/* MASTERY Mobile Responsive */
+    /* MASTERY Mobile Responsive */
     .mastery-hero h1 {
         font-size: 2.5rem;
     }
@@ -1875,6 +1937,18 @@ body::before {
         margin-right: 1rem;
     }
 
+    /* Testimonials mobile */
+    .nmp-testimonial-card {
+        padding: 1.25rem;
+    }
+
+    .nmp-quote-text {
+        font-size: 1rem;
+    }
+
+    .thankyou-testimonials h3 {
+        font-size: 1.5rem;
+    }
 }
 
 
@@ -1912,7 +1986,7 @@ body::before {
         max-height: 120px;
     }
 
-        /* Even smaller nav button on very small screens */
+    /* Even smaller nav button on very small screens */
     .navbar .btn {
         padding: 0.4rem 0.8rem;
         font-size: 0.75rem;
@@ -1924,7 +1998,6 @@ body::before {
     }
 
     /* PARTNERS */
-
     .partners-content h1 {
         font-size: 2rem;
     }
@@ -1943,7 +2016,6 @@ body::before {
     }
 
     /* MASTERY */
-
     .mastery-hero h1 {
         font-size: 2rem;
     }
@@ -1979,7 +2051,6 @@ body::before {
     .mastery-closing-cta {
         padding: 3.5rem 1rem;
     }
-
 }
 
 /* Smooth scrolling */
