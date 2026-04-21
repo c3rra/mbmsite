@@ -310,8 +310,13 @@ body::before {
 
 .cta-container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     padding: 4rem 2rem;
+}
+
+.cta-container img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Spacing between all direct children of cta-container */
