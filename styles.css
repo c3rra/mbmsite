@@ -599,9 +599,54 @@ body::before {
 
 /* MASTERY PROGRAM */
 
+.thankyou-divider {
+    border: none;
+    border-top: 2px solid rgba(247, 180, 13, 0.4);
+    margin: 2.5rem auto;
+    width: 80%;
+}
+
+.thankyou-link {
+    color: #1c1f26;
+    text-decoration: underline;
+    font-weight: bold;
+    background-color: #f7b40d;
+    padding: 0 4px;
+    border-radius: 3px;
+}
+
 .thankyou-testimonials {
     margin-top: 3rem;
     text-align: left;
+}
+
+.nmp-alumni-stat {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1c1f26;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.thankyou-bubble {
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.thankyou-bubble h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1c1f26;
+    margin-bottom: 1rem;
+}
+
+.thankyou-bubble p {
+    font-size: 1.05rem;
+    color: #1c1f26;
+    opacity: 0.85;
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 .thankyou-testimonials h3 {
@@ -1511,7 +1556,7 @@ body::before {
 }
 
 .mastery-price-current {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: #1c1f26;
     display: block;
@@ -1887,7 +1932,7 @@ body::before {
     }
 
     .mastery-price-current {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     .mastery-final-cta h2 {
