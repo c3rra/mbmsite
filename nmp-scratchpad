@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Mastery Program - Mad Banana Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Mad Banana Media 🍌</a>
+            <a href="#investment" class="btn">Join The Program</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="mastery-hero">
+        <div class="mastery-hero-content fade-in">
+            <span class="mastery-scarcity-badge">Cohort 2: August 11–28, 2026 — 6 spots only</span>
+            <h1>What if your newsletter actually made <span class="highlight">(serious) money?</span></h1>
+            <h2 class="mastery-hero-h2">And only took 2hrs a week?</h2>
+            <p class="mastery-hero-subhead">A 4-week cohort program for creators and digital entrepreneurs ready to turn their newsletter from checkbox exercise into their highest-performing, fully-owned marketing channel.</p>
+            <a href="#investment" class="btn btn-large">Join The Program →</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="mastery-problem">
+        <div class="mastery-container fade-in">
+            <p class="mastery-section-label">The Problem</p>
+            <h2 class="mastery-section-title">It doesn't matter if you have 10,000 followers or 10 million.</h2>
+            <p><span class="highlight">The Algorithm is your biggest existential threat.</span></p>
+            <p>Those followers? They aren't really yours. They belong to the platform—YouTube, Instagram, LinkedIn, TikTok. Even bloggers put their destiny in the hands of Google's ranking algorithm, which can tank reach in a single update.</p>
+            <p>And here's what nobody tells you: <strong>the bigger your audience gets, the more you have to lose.</strong></p>
+            <p>We're humans. We love vanity metrics—views, likes, comments, shares, saves, followers. We tell ourselves that if we keep growing the audience, things will get better. Easier. More independent. More successful.</p>
+            <p>Sadly, we're wrong.</p>
+            <p>In reality, the chains that tie you to The Algorithm get heavier and heavier with every milestone.</p>
+            <p><strong>But you can break free.</strong></p>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="mastery-solution">
+        <div class="mastery-container fade-in">
+            <p class="mastery-section-label">The Solution</p>
+            <h2 class="mastery-section-title">At some point, every Top 1% creator learns this lesson.</h2>
+            <p>They don't talk about it much—because email isn't as sexy as vanity metrics. But they <strong>NEVER</strong> rely on external channels alone.</p>
+            
+            <table class="mastery-creator-table">
+                <thead>
+                    <tr>
+                        <th>Creator</th>
+                        <th>Platform</th>
+                        <th>Audience</th>
+                        <th>Newsletter</th>
+                        <th>Ownership</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Creator">Ali Abdaal</td>
+                        <td data-label="Platform">YouTube</td>
+                        <td data-label="Audience">6,500,000</td>
+                        <td data-label="Newsletter">330,000</td>
+                        <td data-label="Ownership">5%</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Creator">Michelle Coulson</td>
+                        <td data-label="Platform">LinkedIn</td>
+                        <td data-label="Audience">94,000</td>
+                        <td data-label="Newsletter">19,000</td>
+                        <td data-label="Ownership">20.2%</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Creator">Zach Pogrob</td>
+                        <td data-label="Platform">Instagram</td>
+                        <td data-label="Audience">1,200,000</td>
+                        <td data-label="Newsletter">50,000</td>
+                        <td data-label="Ownership">4.1%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>They know that <strong>owned distribution is the most powerful lever.</strong></p>
+            <p>And that means either building your own social media network 👀 …or building an email list. 😏</p>
+            <p><strong>The Newsletter Mastery Program puts control back where it belongs—with you.</strong></p>
+            <p>Don't quit your YouTube channel, your Instagram profile, or your LinkedIn content. But STOP wasting all the attention you work hard to earn.</p>
+            <p>Capture it. Leverage it properly. With email newsletters.</p>
+        </div>
+    </section>
+
+    <!-- Transformation Section -->
+    <section class="mastery-transformation">
+        <div class="mastery-container fade-in">
+            <p class="mastery-section-label">The Transformation</p>
+            <h2 class="mastery-section-title">Where you are now → Where you'll be after</h2>
+            
+            <div class="mastery-transformation-grid">
+                <div class="mastery-transformation-row">
+                    <span class="mastery-transformation-before">Newsletter feels like a chore</span>
+                    <span class="mastery-transformation-arrow">→</span>
+                    <span class="mastery-transformation-after">Newsletter runs in under 2 hours/week</span>
+                </div>
+                <div class="mastery-transformation-row">
+                    <span class="mastery-transformation-before">No clear strategy—just "sending stuff"</span>
+                    <span class="mastery-transformation-arrow">→</span>
+                    <span class="mastery-transformation-after">Documented system for distribution, content + monetisation</span>
+                </div>
+                <div class="mastery-transformation-row">
+                    <span class="mastery-transformation-before">Guessing what to send and when</span>
+                    <span class="mastery-transformation-arrow">→</span>
+                    <span class="mastery-transformation-after">Content calendar + templates that work while you sleep</span>
+                </div>
+                <div class="mastery-transformation-row">
+                    <span class="mastery-transformation-before">Uncomfortable selling to your list</span>
+                    <span class="mastery-transformation-arrow">→</span>
+                    <span class="mastery-transformation-after">Revenue model that feels natural (not salesy)</span>
+                </div>
+                <div class="mastery-transformation-row">
+                    <span class="mastery-transformation-before">Fully dependent on platform algorithms</span>
+                    <span class="mastery-transformation-arrow">→</span>
+                    <span class="mastery-transformation-after">Owned audience you can reach anytime, no algorithm required</span>
+                </div>
+            </div>
+
+            <p class="mastery-transformation-summary">Turn your newsletter from a weekly annoyance into your best-performing channel.</p>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section class="mastery-curriculum">
+        <div class="mastery-container fade-in">
+            <p class="mastery-section-label">The Curriculum</p>
+            <h2 class="mastery-section-title">What's Inside</h2>
+
+            <div class="mastery-week-card">
+                <span class="mastery-week-label">Week 0</span>
+                <h3>Pre-Work</h3>
+                <p>Cohort introductions + Email Newsletter Basics Masterclass (self-serve content so you hit the ground running)</p>
+            </div>
+
+            <div class="mastery-week-card">
+                <span class="mastery-week-label">Week 1</span>
+                <h3>Distribution Mastery</h3>
+                <p>Learn how to capture more emails and prime subscribers to actually read what you send.</p>
+                <span class="mastery-deliverable">You'll leave with: Optimised capture points + welcome sequence framework</span>
+            </div>
+
+            <div class="mastery-week-card">
+                <span class="mastery-week-label">Week 2</span>
+                <h3>Content Mastery (Part 1)</h3>
+                <p>Learn what to send and how to drive engagement—not just opens, but replies and action.</p>
+                <span class="mastery-deliverable">You'll leave with: Content pillars + engagement playbook</span>
+            </div>
+
+            <div class="mastery-week-card">
+                <span class="mastery-week-label">Week 3</span>
+                <h3>Content Mastery (Part 2)</h3>
+                <p>Learn how to make email efficient, so it keeps working while you sleep.</p>
+                <span class="mastery-deliverable">You'll leave with: Templates, batching system + automation workflows</span>
+            </div>
+
+            <div class="mastery-week-card">
+                <span class="mastery-week-label">Week 4</span>
+                <h3>Business Mastery</h3>
+                <p>Learn how to generate meaningful revenue with your newsletter—without feeling salesy.</p>
+                <span class="mastery-deliverable">You'll leave with: Monetisation model mapped to your business</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="mastery-how">
+        <div class="mastery-container fade-in">
+            <p class="mastery-section-label">The Format</p>
+            <h2 class="mastery-section-title">How the Cohort Works</h2>
+            <p><strong>Cohort onboarding: Wednesday 6th August</strong></p>
+            <p><strong>3 sessions per week across 4 weeks:</strong></p>
+
+            <div class="mastery-session-grid">
+                <div class="mastery-session-card">
+                    <span class="mastery-session-day">Mondays @ 4pm CET</span>
+                    <div class="mastery-session-content">
+                        <h4>Group Learning Session</h4>
+                        <p>Core teaching, frameworks, examples. Then you implement what you've learned through structured homework before the next session.</p>
+                        <p><strong>Dates:</strong> 11 Aug, 18 Aug, 25 Aug</p>
+                    </div>
+                </div>
+                <div class="mastery-session-card">
+                    <span class="mastery-session-day">Thursdays (time TBC)</span>
+                    <div class="mastery-session-content">
+                        <h4>Private 1:1 Coaching Call</h4>
+                        <p>Deep, personalised support on your specific newsletter</p>
+                        <p><strong>Dates:</strong> 7 Aug, 14 Aug, 21 Aug, 28 Aug</p>
+                    </div>
+                </div>
+                <div class="mastery-session-card">
+                    <span class="mastery-session-day">Fridays @ 4pm CET</span>
+                    <div class="mastery-session-content">
+                        <h4>Open AMA Call</h4>
+                        <p>Bring your questions from the week, get answers in real-time</p>
+                        <p><strong>Dates:</strong> 8 Aug, 15 Aug, 22 Aug, 29 Aug</p>
+                    </div>
+                </div>
+            </div>
+
+            <p>This isn't passive content consumption. Each week you'll leave the learning session with clear homework to implement what you've learned—with direct guidance from a newsletter pro.</p>
+            
+            <div class="mastery-cohort-size">
+                <p><strong>Cohort size: 6 people maximum.</strong><br>Small enough for real conversation. Big enough for diverse perspectives.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section class="mastery-included">
+        <div class="mastery-container fade-in">
+            <p class="mastery-section-label">What You Get</p>
+            <h2 class="mastery-section-title">What's Included</h2>
+
+            <div class="mastery-included-grid">
+                <div class="mastery-included-column">
+                    <h3>Core Program</h3>
+                    <div class="mastery-core-item">
+                        <strong>4 weeks of live group learning sessions</strong>
+                        <p>Recorded for replay if you can't make it live</p>
+                    </div>
+                    <div class="mastery-core-item">
+                        <strong>4 private 1:1 coaching calls</strong>
+                        <p>Deep, personalised support on your specific newsletter</p>
+                    </div>
+                    <div class="mastery-core-item">
+                        <strong>Weekly AMA sessions</strong>
+                        <p>Get your questions answered in real-time</p>
+                    </div>
+                    <div class="mastery-core-item">
+                        <strong>Structured homework with direct feedback</strong>
+                        <p>Implementation, not just information</p>
+                    </div>
+                </div>
+                <div class="mastery-included-column">
+                    <h3>Bonuses (Total Value: £2,750)</h3>
+                    <div class="mastery-bonus-item">
+                        <strong>Pre-cohort onboarding 1:1</strong>
+                        <p>Make sure you're set up for success before we start</p>
+                        <span class="mastery-bonus-value">Value: £500</span>
+                    </div>
+                    <div class="mastery-bonus-item">
+                        <strong>"Am I using the right email platform?" decision tree</strong>
+                        <p>Plus migration guidance if you need to switch</p>
+                        <span class="mastery-bonus-value">Value: £350</span>
+                    </div>
+                    <div class="mastery-bonus-item">
+                        <strong>Technical deliverability checklist</strong>
+                        <p>So your emails actually reach the inbox</p>
+                        <span class="mastery-bonus-value">Value: £300</span>
+                    </div>
+                    <div class="mastery-bonus-item">
+                        <strong>2 post-cohort 1:1 coaching calls</strong>
+                        <p>Keep your momentum going after we wrap</p>
+                        <span class="mastery-bonus-value">Value: £800</span>
+                    </div>
+                    <div class="mastery-bonus-item">
+                        <strong>Forever access to your Newsletter Mastery Notion Control Centre</strong>
+                        <p>All frameworks, templates, and resources in one place—yours to keep</p>
+                        <span class="mastery-bonus-value">Value: £800</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="mastery-about">
+        <div class="mastery-container fade-in">
+            <p class="mastery-section-label">Your Guide</p>
+            <div class="mastery-about-content">
+                <img src="chriscerra.png" alt="Chris Cerra" class="circleheadshot">
+                <div class="mastery-about-text">
+                    <h2>Hi, I'm Chris.</h2>
+                    <p>I've been running newsletters since 2019—building multiple publications including RemoteBase (5K+ subscribers) while living as a full-time digital nomad.</p>
+                    <p>Through Mad Banana Media, I've helped creators and entrepreneurs across industries turn scattered email efforts into strategic, revenue-generating assets.</p>
+                    <p>I'm not here to give you theory. I'm here to show you what actually works—and help you implement it.</p>
+                    <p class="mastery-about-tagline">7 years of newsletter experience. Condensed into 4 weeks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <h2>What Cohort 1 Had To Say</h2>
+            <div id="testimonialto-newsletters-tag-all-light" class="testimonialto-embed" data-layout="grid" data-theme="light"></div>
+            <script type="text/javascript" src="https://embed.testimonial.to/js/iframeResizer.min.js"></script>
+            <script type="text/javascript">
+                document.addEventListener("DOMContentLoaded", function() {
+                    const container = document.getElementById("testimonialto-newsletters-tag-all-light");
+                    const iframe = document.createElement("iframe");
+                    iframe.setAttribute("id", "testimonialto-newsletters-tag-all-light-iframe");
+                    iframe.setAttribute("src", "https://embed.testimonial.to/w/newsletters?tag=all&theme=light");
+                    iframe.setAttribute("frameborder", "0");
+                    iframe.setAttribute("scrolling", "no");
+                    iframe.setAttribute("width", "100%");
+                    container.appendChild(iframe);
+                    iFrameResize({log: false, checkOrigin: false}, "#testimonialto-newsletters-tag-all-light-iframe");
+                });
+            </script>
+        </div>
+    </section>
+
+    <!-- Who This Is For Section -->
+    <section class="mastery-for">
+        <div class="mastery-container fade-in">
+            <p class="mastery-section-label">Is This For You?</p>
+            <h2 class="mastery-section-title">Who This Is For / Not For</h2>
+
+            <div class="mastery-for-grid">
+                <div class="mastery-for-column yes">
+                    <h3>This is for you if:</h3>
+                    <div class="mastery-for-item">You're a creator with a product or service to sell</div>
+                    <div class="mastery-for-item">You're an entrepreneur relying heavily on social media or personal branding for leads</div>
+                    <div class="mastery-for-item">You're an influencer looking to de-risk your dependence on platform algorithms</div>
+                    <div class="mastery-for-item">You're motivated and can commit ~1.5 days per week to the program through August (this isn't passive content consumption—you'll be implementing)</div>
+                </div>
+                <div class="mastery-for-column no">
+                    <h3>This is NOT for you if:</h3>
+                    <div class="mastery-for-item">You're looking for someone to "do it for you"</div>
+                    <div class="mastery-for-item">You're not ready to commit 3–5 hours per week to implementation</div>
+                    <div class="mastery-for-item">You don't have (or aren't building) something to sell</div>
+                    <div class="mastery-for-item">You want hacks and tricks instead of sustainable strategy</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section class="mastery-investment" id="investment">
+        <div class="mastery-container fade-in">
+            <p class="mastery-section-label" style="color: #1c1f26;">Investment</p>
+            <h2 class="mastery-section-title">Cohort 2 Pricing</h2>
+            
+            <div class="mastery-price-display">
+                <span class="mastery-price-original">£1,900</span>
+                <span class="mastery-price-current">£1,400</span>
+                <p class="mastery-price-note"><strong>🔥 Super Early Bird (May only)</strong><br>Price increases to £1,700 in June, then £1,900 in July.</p>
+            </div>
+
+            <p class="mastery-payment-note"><strong>Need a payment plan?</strong> Email <a href="mailto:hi@madbananamedia.com" style="color: #1c1f26; font-weight: 600;">hi@madbananamedia.com</a> and we'll work something out.</p>
+            <a href="ADD STRIPE LINK" class="btn btn-dark btn-large">Join The Program →</a>
+            <p class="mastery-invitation-note">Places limited to 6.</p>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="mastery-final-cta">
+        <div class="mastery-container fade-in">
+            <h2>Ready to be a Top 1%, category-defining creator?</h2>
+            <p>Stop being "that guy from LinkedIn" or "that IG girl."</p>
+            <p>Own your audience. Transform your newsletter. In just 4 weeks.</p>
+            <a href="ADD STRIPE LINK" class="btn btn-large">Join The Program →</a>
+            <p class="mastery-spots-remaining">Cohort 2: August 11–28, 2026<br>6 spots only</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mastery-faq">
+        <div class="mastery-container fade-in">
+            <p class="mastery-section-label">Questions?</p>
+            <h2 class="mastery-section-title">FAQ</h2>
+
+            <div class="mastery-faq-item">
+                <h4>When does the Newsletter Mastery Program run?</h4>
+                <p>August 11–28, 2026. Cohort onboarding on Wednesday 6th August. Fully online.</p>
+            </div>
+
+            <div class="mastery-faq-item">
+                <h4>What if I don't have a newsletter yet?</h4>
+                <p>That's okay—you'll build it the right way from day one. However, you should have a large online audience (10K+ followers) to get the most out of this program. We'll use your pre-cohort onboarding call to make sure you're ready to go.</p>
+            </div>
+
+            <div class="mastery-faq-item">
+                <h4>Is the content recorded?</h4>
+                <p>Learning sessions are recorded and available for replay. AMA sessions and 1:1 calls remain private.</p>
+            </div>
+
+            <div class="mastery-faq-item">
+                <h4>How much time do I need to commit?</h4>
+                <p>Expect ~1.5 days per week: calls + homework implementation.</p>
+            </div>
+
+            <div class="mastery-faq-item">
+                <h4>What if I have to miss a session?</h4>
+                <p>Life happens. Learning sessions are recorded. We'll work around scheduling conflicts for 1:1s where possible.</p>
+            </div>
+
+            <div class="mastery-faq-item">
+                <h4>Got another question?</h4>
+                <p>Email <a href="mailto:hi@madbananamedia.com">hi@madbananamedia.com</a> — you'll hear back within 24 hours.</p>
+            </div>
+
+            <!-- 
+            =====================================================
+            COMMENTED OUT FAQ QUESTIONS - REVIEW AND ADD AS NEEDED
+            Inspired by Lex Roman's Double Your Subs page
+            =====================================================
+            
+            <div class="mastery-faq-item">
+                <h4>I know what I need to do. Can't I just do this myself?</h4>
+                <p>In theory, yes. But have you? What's stopping you from doing it? If you didn't think you needed the guidance and accountability, you wouldn't be reading this page.</p>
+            </div>
+
+            <div class="mastery-faq-item">
+                <h4>Your free content has helped me already. Why should I pay now?</h4>
+                <p>If my free content has helped you, imagine what 4 weeks of direct, personalised guidance would do. If you believe in yourself and you believe in me, you'll see a solid return from this.</p>
+            </div>
+
+            <div class="mastery-faq-item">
+                <h4>What if I don't believe this is possible for me?</h4>
+                <p>These strategies work reliably—they're used by successful creators I've worked with and studied. The only reason this wouldn't work: your audience wasn't built on trust. If your list is mostly from ads with low engagement, you might not be ready for this yet.</p>
+            </div>
+
+            <div class="mastery-faq-item">
+                <h4>Do you have a money-back guarantee?</h4>
+                <p>If you complete every assignment and see zero results, email me with your work and we'll discuss a refund. I'm confident in the program—but I also want you to feel safe investing.</p>
+            </div>
+
+            <div class="mastery-faq-item">
+                <h4>What's the minimum/maximum cohort size?</h4>
+                <p>Maximum is 6 people—small enough for real conversation, big enough for diverse perspectives. If we don't hit a minimum viable group, you'll get a full refund.</p>
+            </div>
+
+            <div class="mastery-faq-item">
+                <h4>What platform do you use?</h4>
+                <p>All live sessions happen on Zoom. Your Notion Control Centre houses all frameworks, templates, and resources—yours to keep forever.</p>
+            </div>
+            -->
+        </div>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="mastery-closing-cta">
+        <div class="mastery-container">
+            <a href="ADD STRIPE LINK" class="btn btn-large">Join The Program →</a>
+            <span class="mastery-banana-emoji">🍌</span>
+            <p class="mastery-tagline">No drama banana.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mastery-footer">
+        <div class="mastery-footer-bottom">
+            <p>made with 🍌 by a bunch of new media champions.</p>
+            <br>
+            <p>&copy; 2026 Mad Banana Media | <a href="privacy.html">Privacy Policy</a> | <a href="mailto:hi@madbananamedia.com">Contact</a> | All rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>
