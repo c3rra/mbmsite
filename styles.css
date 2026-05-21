@@ -1586,6 +1586,146 @@ body::before {
     margin: 0 auto;
 }
 
+.mastery-price-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(247, 180, 13, 0.3);
+    border-radius: 15px;
+    padding: 1.75rem 2.5rem 2.5rem;
+    margin: 0 auto 0;
+    max-width: 680px;
+}
+
+.mastery-price-value {
+    font-size: 1.3rem;
+    color: #1c1f26;
+    opacity: 0.5;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.mastery-price-hero {
+    margin: 0.5rem 0 2rem;
+}
+
+.mastery-price-hero-label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #1c1f26;
+    margin-bottom: 0.5rem;
+}
+
+.mastery-price-hero-amount {
+    display: block;
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: #1c1f26;
+    line-height: 1;
+}
+
+.mastery-price-timeline {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto 2.5rem;
+    max-width: 480px;
+}
+
+.mastery-price-tier {
+    flex: 1;
+    text-align: center;
+    padding: 1.1rem 0.75rem;
+    border-radius: 10px;
+    background: rgba(28, 31, 38, 0.07);
+    opacity: 0.45;
+}
+
+.mastery-price-tier.current {
+    background: #1c1f26;
+    opacity: 1;
+}
+
+.mastery-price-tier-month {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #1c1f26;
+    margin-bottom: 0.25rem;
+}
+
+.mastery-price-tier.current .mastery-price-tier-month {
+    color: rgba(247, 180, 13, 0.8);
+}
+
+.mastery-price-tier-type {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #1c1f26;
+    opacity: 0.6;
+    margin-bottom: 0.2rem;
+}
+
+.mastery-price-tier.current .mastery-price-tier-type {
+    color: #f7b40d;
+    opacity: 0.8;
+}
+
+.mastery-price-tier-cost {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1c1f26;
+}
+
+.mastery-price-tier.current .mastery-price-tier-cost {
+    color: #f7b40d;
+}
+
+.mastery-investment .mastery-spots-remaining {
+    color: #1c1f26;
+}
+
+.mastery-guarantee-note {
+    font-size: 0.9rem;
+    color: #1c1f26;
+    opacity: 0.75;
+    margin-top: 1.25rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.mastery-future-pacing {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #1c1f26;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    opacity: 0.9;
+}
+
+.mastery-investment-dates {
+    display: inline-block;
+    background: #ffffff;
+    color: #1c1f26;
+    padding: 0.6rem 1.25rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0.75rem 0 2rem;
+}
+
 .mastery-payment-note {
     margin: 1.5rem 0 2rem;
     font-size: 1.05rem;
@@ -1594,7 +1734,7 @@ body::before {
 
 .mastery-invitation-note {
     font-size: 0.95rem;
-    font-style: italic;
+    font-weight: 700;
     opacity: 0.8;
     margin-top: 1.5rem;
     color: #1c1f26;
@@ -1949,6 +2089,29 @@ body::before {
         font-size: 3rem;
     }
 
+    .mastery-price-timeline {
+        flex-direction: column;
+        max-width: 320px;
+    }
+
+    .mastery-price-tier {
+        width: 100%;
+    }
+
+    .mastery-investment-dates {
+        font-size: 0.78rem;
+        white-space: nowrap;
+        padding: 0.5rem 1rem;
+    }
+
+    .mastery-price-hero-amount {
+        font-size: 3.5rem;
+    }
+
+    .mastery-price-card {
+        padding: 1.5rem 1.25rem 2rem;
+    }
+
     .mastery-final-cta h2 {
         font-size: 2rem;
     }
@@ -2014,6 +2177,15 @@ body::before {
 @media (max-width: 480px) {
     .navbar {
         padding: 1rem;
+    }
+
+    .mastery-investment-dates {
+        font-size: 0.68rem;
+        letter-spacing: 0.04em;
+    }
+
+    .mastery-price-hero-amount {
+        font-size: 3rem;
     }
 
     .hero {

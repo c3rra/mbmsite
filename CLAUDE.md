@@ -17,7 +17,7 @@ Direct, no-nonsense, conversational. Short punchy sentences, second person, arro
 - H1: "What if your newsletter made (serious) money?"
 - H2: "And only took 2hrs a week?"
 - CTA: "Join The Program →"
-- Scarcity badge: "Cohort 2: August 11–28, 2026 — 6 spots only"
+- Scarcity badge: "Cohort 2: August 3–28, 2026 — 6 spots only"
 
 ## Active TODOs
 1. Add real Stripe payment links (all placeholders say `ADD STRIPE LINK`)
