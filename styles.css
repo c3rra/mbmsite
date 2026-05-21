@@ -697,6 +697,15 @@ body::before {
     display: inline;
 }
 
+/* About text card wrapper */
+.mastery-about-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(247, 180, 13, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
 @media (max-width: 768px) {
     .nmp-testimonial-card {
         padding: 1.25rem;
