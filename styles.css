@@ -86,6 +86,10 @@ body::before {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
+.mastery-mobile-cta-bar {
+    display: none;
+}
+
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1976,9 +1980,14 @@ body::before {
         max-height: 150px;
     }
 
-    /* Fix hero padding for fixed navbar */
+    /* Navbar scrolls away on mobile */
+    .navbar {
+        position: relative;
+    }
+
+    /* Restore hero padding — no longer needs to clear a fixed navbar */
     .mastery-hero {
-        padding: 140px 2rem 4rem 2rem;
+        padding: 4rem 2rem;
     }
 
     /* Nav button smaller on mobile */
@@ -1993,6 +2002,35 @@ body::before {
 
     .navbar .logo {
         font-size: 1.1rem;
+    }
+
+    /* Sticky bottom CTA bar — mobile only */
+    .mastery-mobile-cta-bar {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 0.75rem 1rem;
+        background: linear-gradient(270deg, #f7b40d, #ffc944);
+        border-top: 3px solid #fff9f0;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .mastery-mobile-cta-btn {
+        display: block;
+        text-align: center;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: #1c1f26;
+        text-decoration: none;
+    }
+
+    /* Add bottom padding to page so content isn't hidden behind the bar */
+    body {
+        padding-bottom: 64px;
     }
 
     /* PARTNERS Mobile Responsive */
