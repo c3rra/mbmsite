@@ -517,7 +517,7 @@
 
             <div class="mastery-faq-item">
                 <h4>What if it doesn't deliver results for me?</h4>
-                <p>100% of past participants said NMP exceeded expectations. But if you attend every session, complete the homework, and still don't feel you have a strategy that works, you'll get 4 additional 1:1 sessions (value £2,000) to get you there. That's how confident I am in what we build together. Get in touch at <a href="mailto:hi@madbananamedia.com">hi@madbananamedia.com</a></p>
+                <p>100% of past participants said NMP exceeded expectations, so I'm confident you'll love what we build together.<br><br> That said, if you attend every session, complete all the homework, and still don't feel confident in your newsletter, you'll get 4 additional 1:1 sessions (value £2,000) to get you there - that's my no-questions-asked promise to you.</p>
             </div>
 
             <div class="mastery-faq-item">
@@ -560,9 +560,27 @@
     </footer>
 
     <!-- Mobile Sticky Bottom CTA Bar -->
-    <div class="mastery-mobile-cta-bar">
-        <a href="https://buy.stripe.com/4gM3cuety6kabJwaVzaR204" class="mastery-mobile-cta-btn">Join The Program → Aug 3–28 | 6 spots only</a>
+    <div class="mastery-mobile-cta-bar" id="mobileCTABar">
+        <a href="https://buy.stripe.com/4gM3cuety6kabJwaVzaR204" class="mastery-mobile-cta-btn">AUG 3–28 &nbsp;·&nbsp; LIMITED SEATS &nbsp;·&nbsp; JOIN NOW →</a>
     </div>
+
+    <script>
+        (function() {
+            var navbar = document.querySelector('.navbar');
+            var mobileBar = document.getElementById('mobileCTABar');
+            if (!navbar || !mobileBar) return;
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (!entry.isIntersecting) {
+                        mobileBar.classList.add('is-visible');
+                    } else {
+                        mobileBar.classList.remove('is-visible');
+                    }
+                });
+            }, { threshold: 0 });
+            observer.observe(navbar);
+        })();
+    </script>
 
 </body>
 </html>

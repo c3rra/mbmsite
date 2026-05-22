@@ -90,6 +90,10 @@ body::before {
     display: none;
 }
 
+.mastery-mobile-cta-bar.is-visible {
+    transform: translateY(0);
+}
+
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -2012,25 +2016,32 @@ body::before {
         left: 0;
         width: 100%;
         z-index: 1000;
-        padding: 0.75rem 1rem;
-        background: linear-gradient(270deg, #f7b40d, #ffc944);
-        border-top: 3px solid #fff9f0;
+        padding: 1.1rem 1.25rem;
+        background: #f0a800;
+        border-top: 3px solid rgba(255, 255, 255, 0.4);
         box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+        transform: translateY(100%);
+        transition: transform 0.35s ease;
     }
 
     .mastery-mobile-cta-btn {
         display: block;
+        width: 100%;
         text-align: center;
         font-family: 'Space Grotesk', sans-serif;
         font-weight: 700;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         color: #1c1f26;
         text-decoration: none;
+        background: #ffffff;
+        padding: 0.85rem 1.25rem;
+        border-radius: 15px;
+        box-sizing: border-box;
     }
 
     /* Add bottom padding to page so content isn't hidden behind the bar */
     body {
-        padding-bottom: 64px;
+        padding-bottom: 80px;
     }
 
     /* PARTNERS Mobile Responsive */
