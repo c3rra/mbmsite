@@ -3,7 +3,8 @@
 ## Project
 Newsletter Mastery Program (NMP) landing page for Mad Banana Media (Chris Cerra's newsletter strategy consulting agency).
 
-**Main file:** `newslettermasteryprogram-waitlist.html`
+**Main file:** `newslettermasteryprogram.html` (Cohort 2 landing page — live at /newslettermasteryprogram)
+**Archived:** `newslettermasteryprogram-cohort1.html` (old Cohort 1 page)
 **Stylesheet:** `styles.css` (shared across all site pages — all NMP classes prefixed `mastery-`)
 **Other pages:** `index.html`, `partners.html`, `privacy.html`, thank you page
 
