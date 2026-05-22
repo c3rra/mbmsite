@@ -393,6 +393,28 @@
 
                 </div>
 
+                <div class="mastery-countdown" id="masteryCountdown">
+                    <p class="mastery-countdown-label" id="countdownLabel"></p>
+                    <div class="mastery-countdown-units">
+                        <div class="mastery-countdown-unit">
+                            <span class="mastery-countdown-number" id="countdownDays">00</span>
+                            <span class="mastery-countdown-unit-label">days</span>
+                        </div>
+                        <div class="mastery-countdown-unit">
+                            <span class="mastery-countdown-number" id="countdownHours">00</span>
+                            <span class="mastery-countdown-unit-label">hrs</span>
+                        </div>
+                        <div class="mastery-countdown-unit">
+                            <span class="mastery-countdown-number" id="countdownMins">00</span>
+                            <span class="mastery-countdown-unit-label">mins</span>
+                        </div>
+                        <div class="mastery-countdown-unit">
+                            <span class="mastery-countdown-number" id="countdownSecs">00</span>
+                            <span class="mastery-countdown-unit-label">secs</span>
+                        </div>
+                    </div>
+                </div>
+
                 <a href="https://buy.stripe.com/4gM3cuety6kabJwaVzaR204" class="btn aboutbtn btn-large">Join The Program →</a>
                 <p class="mastery-invitation-note">Seats are limited.<br>Secure your spot now for instant access to bonus materials.</p>
                 <p class="mastery-guarantee-note">100% of past participants said NMP exceeded expectations.<br>If you attend every session, complete the homework, and aren't happy, I'll give you 4 additional 1:1 sessions (value £2,000) to get you to where you need to be.</p>
@@ -563,6 +585,48 @@
     <div class="mastery-mobile-cta-bar" id="mobileCTABar">
         <a href="https://buy.stripe.com/4gM3cuety6kabJwaVzaR204" class="mastery-mobile-cta-btn">AUG 3–28 &nbsp;·&nbsp; LIMITED SEATS &nbsp;·&nbsp; JOIN NOW →</a>
     </div>
+
+    <script>
+        (function() {
+            var countdown = document.getElementById('masteryCountdown');
+            var label = document.getElementById('countdownLabel');
+            var daysEl = document.getElementById('countdownDays');
+            var hoursEl = document.getElementById('countdownHours');
+            var minsEl = document.getElementById('countdownMins');
+            var secsEl = document.getElementById('countdownSecs');
+
+            function getConfig() {
+                var now = new Date();
+                var m = now.getMonth(); // 4=May, 5=June, 6=July
+                var y = now.getFullYear();
+                if (m === 4) return { label: 'Super Early Bird price ends in', target: new Date(y, 5, 1) };
+                if (m === 5) return { label: 'Early Bird price ends in', target: new Date(y, 6, 1) };
+                if (m === 6) return { label: 'Last chance — program starts in', target: new Date(y, 7, 3) };
+                return null;
+            }
+
+            function pad(n) { return n < 10 ? '0' + n : n; }
+
+            function tick() {
+                var config = getConfig();
+                if (!config) { countdown.style.display = 'none'; return; }
+                label.textContent = config.label;
+                var diff = config.target - new Date();
+                if (diff <= 0) { countdown.style.display = 'none'; return; }
+                var d = Math.floor(diff / 86400000);
+                var h = Math.floor((diff % 86400000) / 3600000);
+                var mins = Math.floor((diff % 3600000) / 60000);
+                var s = Math.floor((diff % 60000) / 1000);
+                daysEl.textContent = pad(d);
+                hoursEl.textContent = pad(h);
+                minsEl.textContent = pad(mins);
+                secsEl.textContent = pad(s);
+            }
+
+            tick();
+            setInterval(tick, 1000);
+        })();
+    </script>
 
     <script>
         (function() {

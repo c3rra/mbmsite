@@ -1702,6 +1702,55 @@ body::before {
     color: #1c1f26;
 }
 
+.mastery-countdown {
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+}
+
+.mastery-countdown-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #1c1f26;
+    margin-bottom: 0.75rem;
+}
+
+.mastery-countdown-units {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.mastery-countdown-unit {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(247, 180, 13, 0.3);
+    border-radius: 8px;
+    padding: 0.6rem 0.85rem;
+    min-width: 62px;
+    text-align: center;
+}
+
+.mastery-countdown-number {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1c1f26;
+    line-height: 1;
+}
+
+.mastery-countdown-unit-label {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #1c1f26;
+    opacity: 0.5;
+    margin-top: 0.3rem;
+}
+
 .mastery-guarantee-note {
     font-size: 0.9rem;
     color: #1c1f26;
