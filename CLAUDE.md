@@ -21,8 +21,4 @@ Direct, no-nonsense, conversational. Short punchy sentences, second person, arro
 - Scarcity badge: "Cohort 2: August 3–28, 2026 — 6 spots only"
 
 ## Active TODOs
-1. Add real Stripe payment links (all placeholders say `ADD STRIPE LINK`)
-2. Implement pricing section redesign (value crossed out, hero price, tier timeline with "you are here")
-3. Build sticky urgency bar (bottom of screen, current tier + countdown)
-4. Add `.mastery-about-card` CSS to about section
-5. Polish thank you page
+No outstanding build tasks. Page is live and feature-complete for Cohort 2 sales.
