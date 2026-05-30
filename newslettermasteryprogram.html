@@ -375,19 +375,19 @@
 
                     <div class="mastery-price-timeline">
                         <div class="mastery-price-tier current">
-                            <span class="mastery-price-tier-month">May</span>
                             <span class="mastery-price-tier-type">Super Early Bird</span>
                             <span class="mastery-price-tier-cost">£1,400</span>
+                            <span class="mastery-price-tier-month"><span class="mastery-price-tier-ends">ends</span> Jun 14</span>
                         </div>
                         <div class="mastery-price-tier future">
-                            <span class="mastery-price-tier-month">June</span>
                             <span class="mastery-price-tier-type">Early Bird</span>
                             <span class="mastery-price-tier-cost">£1,700</span>
+                            <span class="mastery-price-tier-month"><span class="mastery-price-tier-ends">ends</span> Jul 14</span>
                         </div>
                         <div class="mastery-price-tier future">
-                            <span class="mastery-price-tier-month">July</span>
                             <span class="mastery-price-tier-type">Last Chance</span>
                             <span class="mastery-price-tier-cost">£1,900</span>
+                            <span class="mastery-price-tier-month"><span class="mastery-price-tier-ends">ends</span> Aug 2</span>
                         </div>
                     </div>
 
@@ -425,7 +425,7 @@
     </section>
 
     <!--
-    JUNE VERSION — uncomment this and comment out the MAY VERSION above when June begins
+    EARLY BIRD VERSION — uncomment this and comment out the SUPER EARLY BIRD VERSION above when June 15 arrives
     <section class="mastery-investment" id="investment">
         <div class="mastery-container fade-in">
             <h2 class="mastery-section-title">Join The Newsletter Mastery Program</h2>
@@ -439,19 +439,19 @@
                     </div>
                     <div class="mastery-price-timeline">
                         <div class="mastery-price-tier past">
-                            <span class="mastery-price-tier-month">May</span>
                             <span class="mastery-price-tier-type">Super Early Bird</span>
                             <span class="mastery-price-tier-cost">£1,400</span>
+                            <span class="mastery-price-tier-month"><span class="mastery-price-tier-ends">ends</span> Jun 14</span>
                         </div>
                         <div class="mastery-price-tier current">
-                            <span class="mastery-price-tier-month">June</span>
                             <span class="mastery-price-tier-type">Early Bird</span>
                             <span class="mastery-price-tier-cost">£1,700</span>
+                            <span class="mastery-price-tier-month"><span class="mastery-price-tier-ends">ends</span> Jul 14</span>
                         </div>
                         <div class="mastery-price-tier future">
-                            <span class="mastery-price-tier-month">July</span>
                             <span class="mastery-price-tier-type">Last Chance</span>
                             <span class="mastery-price-tier-cost">£1,900</span>
+                            <span class="mastery-price-tier-month"><span class="mastery-price-tier-ends">ends</span> Aug 2</span>
                         </div>
                     </div>
                 </div>
@@ -645,11 +645,13 @@
 
             function getConfig() {
                 var now = new Date();
-                var m = now.getMonth(); // 4=May, 5=June, 6=July
                 var y = now.getFullYear();
-                if (m === 4) return { label: 'Super Early Bird price ends in', target: new Date(y, 5, 1) };
-                if (m === 5) return { label: 'Early Bird price ends in', target: new Date(y, 6, 1) };
-                if (m === 6) return { label: 'Last chance — program starts in', target: new Date(y, 7, 3) };
+                var jun15 = new Date(y, 5, 15);  // June 15 — Early Bird starts
+                var jul15 = new Date(y, 6, 15);  // July 15 — Last Chance starts
+                var aug3  = new Date(y, 7, 3);   // Aug 3 — program starts
+                if (now < jun15) return { label: 'Super Early Bird price ends in', target: jun15 };
+                if (now < jul15) return { label: 'Early Bird price ends in', target: jul15 };
+                if (now < aug3)  return { label: 'Last chance — program starts in', target: aug3 };
                 return null;
             }
 

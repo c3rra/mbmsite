@@ -1679,7 +1679,11 @@ body::before {
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: #1c1f26;
-    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+.mastery-price-tier-ends {
+    display: inline;
 }
 
 .mastery-price-tier.current .mastery-price-tier-month {
