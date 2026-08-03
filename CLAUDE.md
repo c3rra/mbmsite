@@ -36,6 +36,11 @@ over on their own, so no commit is needed when a deadline passes.
 | Early Bird | £1,650 | 31 Dec 2026 | `…aR206` (verified charges £1,650) |
 | Standard | £1,900 | 31 Jan 2027 | `…aR205` (verified charges £1,900) |
 
+In January the tier strip disappears and £1,900 stands alone under the label "Your
+Investment", via `hideTimeline: true` on the `standard` tier. A late visitor should
+never be anchored on a discount they can no longer get. August through December keep
+the strip, because the higher prices still ahead do the urgency work.
+
 From 1 Feb 2027 the section switches itself to a closed state and all CTAs point at
 the waitlist (`tally.so/r/dWl7qd`).
 

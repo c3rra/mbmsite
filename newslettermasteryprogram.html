@@ -380,7 +380,7 @@
                         <span class="mastery-price-hero-label" id="nmpHeroLabel">Super Early Bird Offer</span><br>
                         <span class="mastery-price-hero-amount" id="nmpHeroAmount">£1,400</span>
                     </div>
-                    <div class="mastery-price-timeline">
+                    <div class="mastery-price-timeline" id="nmpTimeline">
                         <div class="mastery-price-tier current" data-nmp-tier="superEarlyBird">
                             <span class="mastery-price-tier-type">Super Early Bird</span>
                             <span class="mastery-price-tier-cost">£1,400</span>
@@ -584,6 +584,11 @@
          failure that actually costs money. A skipped tier logs a warning to the
          browser console.
 
+      A tier can also set `hideTimeline: true`, which drops the three-tier strip and
+      leaves the headline price standing alone. The final tier uses this so a January
+      visitor is not anchored on a discount they can no longer get. Earlier tiers keep
+      the strip on purpose: the higher prices still ahead do the urgency work.
+
       Deadlines use the visitor's own clock, so everyone keeps a price through the
       end of their own day. Note this is a front-end gate: it changes what the page
       offers, it does not stop an expired link from working if someone kept the URL.
@@ -616,11 +621,14 @@
                 },
                 {
                     id: 'standard',
-                    heroLabel: 'Standard Price',
+                    heroLabel: 'Your Investment',
                     price: '£1,900',
                     endsAt: new Date(2027, 1, 1),    // sells through Sun 31 Jan 2027
                     countdownLabel: 'Last chance. Program starts in',
-                    link: 'https://buy.stripe.com/8x2cN4gBGdMCfZM4xbaR205'   // verified: charges £1,900
+                    link: 'https://buy.stripe.com/8x2cN4gBGdMCfZM4xbaR205',  // verified: charges £1,900
+                    // January drops the tier strip entirely and shows one flat price, so a
+                    // late visitor is never anchored on a discount they can no longer get.
+                    hideTimeline: true
                 }
             ]
         };
@@ -630,6 +638,7 @@
             var heroLabel = document.getElementById('nmpHeroLabel');
             var heroAmount = document.getElementById('nmpHeroAmount');
             var tierEls = document.querySelectorAll('[data-nmp-tier]');
+            var timeline = document.getElementById('nmpTimeline');
             var countdown = document.getElementById('masteryCountdown');
             var cdLabel = document.getElementById('countdownLabel');
             var cdDays = document.getElementById('countdownDays');
@@ -678,9 +687,7 @@
             function renderClosed() {
                 if (heroLabel) heroLabel.textContent = 'Doors Are Closed';
                 if (heroAmount) heroAmount.style.display = 'none';
-                for (var i = 0; i < tierEls.length; i++) {
-                    tierEls[i].className = 'mastery-price-tier past';
-                }
+                if (timeline) timeline.style.display = 'none';
                 if (countdown) countdown.style.display = 'none';
                 if (note) {
                     note.innerHTML = 'This cohort has closed.<br>Join the waitlist and you\'ll hear about the next one first.';
@@ -715,6 +722,8 @@
                     heroAmount.style.display = '';
                 }
 
+                // The final tier hides the strip and stands alone as a flat price.
+                if (timeline) timeline.style.display = tier.hideTimeline ? 'none' : '';
                 for (var i = 0; i < tierEls.length; i++) {
                     var pos = indexOfTier(tierEls[i].getAttribute('data-nmp-tier'));
                     var state = pos < sell ? 'past' : (pos === sell ? 'current' : 'future');
