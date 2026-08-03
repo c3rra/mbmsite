@@ -27,19 +27,19 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="https://madbananamedia.com" class="logo">MAD BANANA MEDIA 🍌</a>
-            <a href="https://buy.stripe.com/8x2cN4gBGdMCfZM4xbaR205" class="btn">Join The Program</a>
+            <a href="https://buy.stripe.com/4gM3cuety6kabJwaVzaR204" class="btn" data-nmp-cta data-nmp-cta-closed="Join The Waitlist">Join The Program</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="mastery-hero">
         <div class="mastery-hero-content fade-in">
-            <span class="mastery-scarcity-badge">AUG 3–28 - MAX 6 SEATS - JOIN NOW</span>
+            <span class="mastery-scarcity-badge">FEB 1–26 - MAX 6 SEATS - JOIN NOW</span>
             <h1>What if your newsletter made <span class="highlight">(serious) money?</span></h1>
             <h2 class="mastery-hero-h2">And only took 2hrs a week?</h2>
             <p class="mastery-hero-subhead"><strong>Join the Newsletter Mastery Program.</strong></p>
             <p class="mastery-hero-subhead">A 4-week live online program for creators + digital entrepreneurs ready to take their newsletter from a checkbox-exercise to their highest-performing, fully-owned channel.</p>
-            <a href="https://buy.stripe.com/8x2cN4gBGdMCfZM4xbaR205" class="btn btn-large">Join The Program →</a>
+            <a href="https://buy.stripe.com/4gM3cuety6kabJwaVzaR204" class="btn btn-large" data-nmp-cta data-nmp-cta-closed="Join The Waitlist →">Join The Program →</a>
         </div>
     </section>
 
@@ -163,7 +163,7 @@
             <br>
             <div style="text-align: center;">
                 <br>
-                <a href="https://buy.stripe.com/8x2cN4gBGdMCfZM4xbaR205" class="btn aboutbtn btn-large">Join The Program →</a>
+                <a href="https://buy.stripe.com/4gM3cuety6kabJwaVzaR204" class="btn aboutbtn btn-large" data-nmp-cta data-nmp-cta-closed="Join The Waitlist →">Join The Program →</a>
             </div>
         </div>
     </section>
@@ -213,7 +213,7 @@
     <section class="mastery-how">
         <div class="mastery-container fade-in">
             <h2 class="mastery-section-title">How The Program Works</h2>
-            <p><strong>Onboarding: Wednesday 29 July</strong></p>
+            <p><strong>Onboarding: Wednesday 27 January</strong></p>
             <p style="font-size: x-large;"><strong>3 Sessions / Week</strong></p>
 
             <div class="mastery-session-grid">
@@ -356,19 +356,46 @@
         </div>
     </section>
 
+    <!--
+      INVESTMENT SECTION. Self-updating.
 
+      The tier that is highlighted, the headline price, and every "Join The Program"
+      link on this page are all driven by the NMP_PRICING config in the script at the
+      bottom of this file. Deadlines pass on their own: nothing here needs editing or
+      committing when Super Early Bird turns into Early Bird, and so on.
 
-    <!-- INVESTMENT SECTION (live) - single flat price, countdown runs to the Aug 3 program start -->
+      Do NOT hand-edit the price or the Stripe link in the markup below. Change the
+      config instead, and it updates everywhere at once. The hard-coded values here
+      are the correct Super Early Bird state, so the page is still right for anyone
+      whose JavaScript never runs.
+    -->
     <section class="mastery-investment" id="investment">
         <div class="mastery-container fade-in">
             <h2 class="mastery-section-title">Join The Newsletter Mastery Program</h2>
-            <p class="mastery-investment-dates">NEXT PROGRAM: <span style="text-decoration: underline;">AUG 3–28, 2026</span> &nbsp;|&nbsp; 6 SPOTS ONLY</p>
+            <p class="mastery-investment-dates">NEXT PROGRAM: <span style="text-decoration: underline;">FEB 1–26, 2027</span> &nbsp;|&nbsp; 6 SPOTS ONLY</p>
             <div class="mastery-price-card">
                 <div class="mastery-price-display">
                     <p class="mastery-price-value">Program value: <span style="text-decoration: line-through;">£7,550+</span></p>
                     <div class="mastery-price-hero">
-                        <span class="mastery-price-hero-label">Your Investment</span><br>
-                        <span class="mastery-price-hero-amount">£1,900</span>
+                        <span class="mastery-price-hero-label" id="nmpHeroLabel">Super Early Bird Offer</span><br>
+                        <span class="mastery-price-hero-amount" id="nmpHeroAmount">£1,400</span>
+                    </div>
+                    <div class="mastery-price-timeline">
+                        <div class="mastery-price-tier current" data-nmp-tier="superEarlyBird">
+                            <span class="mastery-price-tier-type">Super Early Bird</span>
+                            <span class="mastery-price-tier-cost">£1,400</span>
+                            <span class="mastery-price-tier-month"><span class="mastery-price-tier-ends">ends</span> Nov 30</span>
+                        </div>
+                        <div class="mastery-price-tier future" data-nmp-tier="earlyBird">
+                            <span class="mastery-price-tier-type">Early Bird</span>
+                            <span class="mastery-price-tier-cost">£1,650</span>
+                            <span class="mastery-price-tier-month"><span class="mastery-price-tier-ends">ends</span> Dec 31</span>
+                        </div>
+                        <div class="mastery-price-tier future" data-nmp-tier="standard">
+                            <span class="mastery-price-tier-type">Standard</span>
+                            <span class="mastery-price-tier-cost">£1,900</span>
+                            <span class="mastery-price-tier-month"><span class="mastery-price-tier-ends">ends</span> Jan 31</span>
+                        </div>
                     </div>
                 </div>
                 <div class="mastery-countdown" id="masteryCountdown">
@@ -380,13 +407,12 @@
                         <div class="mastery-countdown-unit"><span class="mastery-countdown-number" id="countdownSecs">00</span><span class="mastery-countdown-unit-label">secs</span></div>
                     </div>
                 </div>
-                <a href="https://buy.stripe.com/8x2cN4gBGdMCfZM4xbaR205" class="btn aboutbtn btn-large">Join The Program →</a>
-                <p class="mastery-invitation-note">Seats are limited.<br>Secure your spot now for instant access to bonus materials.</p>
+                <a href="https://buy.stripe.com/4gM3cuety6kabJwaVzaR204" class="btn aboutbtn btn-large" data-nmp-cta data-nmp-cta-closed="Join The Waitlist →">Join The Program →</a>
+                <p class="mastery-invitation-note" id="nmpInvitationNote">Seats are limited.<br>Secure your spot now for instant access to bonus materials.</p>
                 <p class="mastery-guarantee-note">100% of past participants said NMP exceeded expectations.<br>If you attend every session, complete the homework, and aren't happy, I'll give you 4 additional 1:1 sessions (value £2,000) to get you to where you need to be.</p>
             </div>
         </div>
     </section>
-
 
     <!-- Full Testimonials Block — placed afterwaitlist CTA -->
     <section class="mastery-solution">
@@ -418,9 +444,9 @@
                 </div>
                 <div style="text-align: center;">
                     <br>
-                    <a href="https://buy.stripe.com/8x2cN4gBGdMCfZM4xbaR205" class="btn aboutbtn btn-large">Join The Program →</a>
+                    <a href="https://buy.stripe.com/4gM3cuety6kabJwaVzaR204" class="btn aboutbtn btn-large" data-nmp-cta data-nmp-cta-closed="Join The Waitlist →">Join The Program →</a>
                 </div>
-                
+
 
             </div>
 
@@ -444,8 +470,8 @@
             <h2>Be A Category-Defining Top 1% Creator</h2>
             <p><strong>Be more than just</strong><br><br>'That LinkedIn influencer'<br><br>'That guy from YouTube' <br><br>'That IG travel girly.'<br><br></p>
             <p>Own your audience + transform your newsletter.<br><br>In just 4 weeks.</p>
-            <a href="https://buy.stripe.com/8x2cN4gBGdMCfZM4xbaR205" class="btn btn-large">Join The Program →</a>
-            <p class="mastery-spots-remaining">Aug 3–28, 2026 &nbsp;|&nbsp; only 6 seats — Join now.</p>
+            <a href="https://buy.stripe.com/4gM3cuety6kabJwaVzaR204" class="btn btn-large" data-nmp-cta data-nmp-cta-closed="Join The Waitlist →">Join The Program →</a>
+            <p class="mastery-spots-remaining">Feb 1–26, 2027 &nbsp;|&nbsp; only 6 seats. Join now.</p>
         </div>
     </section>
 
@@ -457,7 +483,7 @@
 
             <div class="mastery-faq-item">
                 <h4>When does the next Newsletter Mastery Program run?</h4>
-                <p>The next program is August 3–28, with your 1:1 onboarding call on July 29. There's only 6 spots, and once they're gone, they're gone.</p>
+                <p>The next program is February 1–26, 2027, with your 1:1 onboarding call on January 27. There's only 6 spots, and once they're gone, they're gone.</p>
             </div>
 
             <div class="mastery-faq-item">
@@ -503,9 +529,9 @@
             <p class="mastery-future-pacing">One year from now, you'll look back on this moment. You'll either see another 12 months of newsletters sent with no real strategy, still dependent on algorithms you don't control.<br><br>Or you'll see a growing list, open rates you're proud of, a newsletter that makes money on your terms, and an audience that's actually yours.<br><br>That choice is right here.</p>
             <h2 class="">This Is Your Moment.</h2>
             <br><br>
-            <a href="https://buy.stripe.com/8x2cN4gBGdMCfZM4xbaR205" class="btn btn-large">Join The Program →</a>
+            <a href="https://buy.stripe.com/4gM3cuety6kabJwaVzaR204" class="btn btn-large" data-nmp-cta data-nmp-cta-closed="Join The Waitlist →">Join The Program →</a>
             <br><br>
-            <p><b>Starting Aug 3, secure one of six seats now.</b></p>
+            <p><b>Starting Feb 1, secure one of six seats now.</b></p>
         </div>
     </section>
 
@@ -526,45 +552,193 @@
 
     <!-- Mobile Sticky Bottom CTA Bar -->
     <div class="mastery-mobile-cta-bar" id="mobileCTABar">
-        <a href="https://buy.stripe.com/8x2cN4gBGdMCfZM4xbaR205" class="mastery-mobile-cta-btn">AUG 3–28 &nbsp;·&nbsp; LIMITED SEATS &nbsp;·&nbsp; JOIN NOW →</a>
+        <a href="https://buy.stripe.com/4gM3cuety6kabJwaVzaR204" class="mastery-mobile-cta-btn" data-nmp-cta data-nmp-cta-closed="JOIN THE WAITLIST →">FEB 1–26 &nbsp;·&nbsp; LIMITED SEATS &nbsp;·&nbsp; JOIN NOW →</a>
     </div>
 
+    <!--
+      ==========================================================================
+      NMP PRICING GATE. The only place to change price, dates or checkout links.
+      ==========================================================================
+
+      This drives, automatically and on schedule:
+        - the big headline price and its label
+        - which of the three tiers is highlighted (past / current / future)
+        - the countdown target and its wording
+        - the href on every "Join The Program" button on the page
+
+      Deadlines pass on their own. Nothing needs editing or committing when Super
+      Early Bird becomes Early Bird, or Early Bird becomes Standard.
+
+      Cohort 3 runs Monday 1 February to Friday 26 February 2027.
+      Onboarding 1:1 is Wednesday 27 January 2027.
+
+      Two rules when editing this:
+
+      1. `link` MUST be a Stripe payment link that charges exactly `price`.
+         Both links below were verified by loading the checkout page and reading
+         the amount off it. If you change a price, change the link to match.
+
+      2. A tier with `link: null` is skipped. The page falls back to the most
+         recent tier that HAS a link, and shows that tier's price too. Displayed
+         price and charged price can therefore never disagree, which is the one
+         failure that actually costs money. A skipped tier logs a warning to the
+         browser console.
+
+      Deadlines use the visitor's own clock, so everyone keeps a price through the
+      end of their own day. Note this is a front-end gate: it changes what the page
+      offers, it does not stop an expired link from working if someone kept the URL.
+      To hard-close a tier, deactivate its payment link in Stripe.
+    -->
     <script>
+        var NMP_PRICING = {
+            // Sales close when the program starts. Month is 0-indexed: 1 = February.
+            programStartsAt: new Date(2027, 1, 1),   // Mon 1 Feb 2027
+            waitlistUrl: 'https://tally.so/r/dWl7qd',
+
+            // Ordered earliest to latest. `endsAt` is the moment the tier stops
+            // selling, i.e. midnight at the start of the following day.
+            tiers: [
+                {
+                    id: 'superEarlyBird',
+                    heroLabel: 'Super Early Bird Offer',
+                    price: '£1,400',
+                    endsAt: new Date(2026, 11, 1),   // sells through Mon 30 Nov 2026
+                    countdownLabel: 'Super Early Bird price ends in',
+                    link: 'https://buy.stripe.com/4gM3cuety6kabJwaVzaR204'   // verified: charges £1,400
+                },
+                {
+                    id: 'earlyBird',
+                    heroLabel: 'Early Bird Offer',
+                    price: '£1,650',
+                    endsAt: new Date(2027, 0, 1),    // sells through Thu 31 Dec 2026
+                    countdownLabel: 'Early Bird price ends in',
+                    link: 'https://buy.stripe.com/6oUfZg2KQ6ka5l88NraR206'   // verified: charges £1,650
+                },
+                {
+                    id: 'standard',
+                    heroLabel: 'Standard Price',
+                    price: '£1,900',
+                    endsAt: new Date(2027, 1, 1),    // sells through Sun 31 Jan 2027
+                    countdownLabel: 'Last chance. Program starts in',
+                    link: 'https://buy.stripe.com/8x2cN4gBGdMCfZM4xbaR205'   // verified: charges £1,900
+                }
+            ]
+        };
+
         (function() {
+            var cfg = NMP_PRICING;
+            var heroLabel = document.getElementById('nmpHeroLabel');
+            var heroAmount = document.getElementById('nmpHeroAmount');
+            var tierEls = document.querySelectorAll('[data-nmp-tier]');
             var countdown = document.getElementById('masteryCountdown');
-            var label = document.getElementById('countdownLabel');
-            var daysEl = document.getElementById('countdownDays');
-            var hoursEl = document.getElementById('countdownHours');
-            var minsEl = document.getElementById('countdownMins');
-            var secsEl = document.getElementById('countdownSecs');
+            var cdLabel = document.getElementById('countdownLabel');
+            var cdDays = document.getElementById('countdownDays');
+            var cdHours = document.getElementById('countdownHours');
+            var cdMins = document.getElementById('countdownMins');
+            var cdSecs = document.getElementById('countdownSecs');
+            var note = document.getElementById('nmpInvitationNote');
+            var ctas = document.querySelectorAll('[data-nmp-cta]');
+            var warned = false;
 
-            function getConfig() {
+            function pad(n) { return n < 10 ? '0' + n : String(n); }
+
+            function indexOfTier(id) {
+                for (var i = 0; i < cfg.tiers.length; i++) {
+                    if (cfg.tiers[i].id === id) return i;
+                }
+                return -1;
+            }
+
+            // The tier selling right now, or -1 once the program has started.
+            function activeIndex(now) {
+                if (now >= cfg.programStartsAt) return -1;
+                for (var i = 0; i < cfg.tiers.length; i++) {
+                    if (now < cfg.tiers[i].endsAt) return i;
+                }
+                return -1;
+            }
+
+            // Step back to the newest tier we can actually charge for, so the page
+            // never shows a price it has no link for.
+            function sellableIndex(from) {
+                for (var i = from; i >= 0; i--) {
+                    if (cfg.tiers[i].link) return i;
+                }
+                return -1;
+            }
+
+            function setCtas(url, closed) {
+                for (var i = 0; i < ctas.length; i++) {
+                    ctas[i].setAttribute('href', url);
+                    var closedLabel = ctas[i].getAttribute('data-nmp-cta-closed');
+                    if (closed && closedLabel) ctas[i].textContent = closedLabel;
+                }
+            }
+
+            function renderClosed() {
+                if (heroLabel) heroLabel.textContent = 'Doors Are Closed';
+                if (heroAmount) heroAmount.style.display = 'none';
+                for (var i = 0; i < tierEls.length; i++) {
+                    tierEls[i].className = 'mastery-price-tier past';
+                }
+                if (countdown) countdown.style.display = 'none';
+                if (note) {
+                    note.innerHTML = 'This cohort has closed.<br>Join the waitlist and you\'ll hear about the next one first.';
+                }
+                setCtas(cfg.waitlistUrl, true);
+            }
+
+            function render() {
                 var now = new Date();
-                var aug3 = new Date(2026, 7, 3);  // Aug 3 2026 - program starts
-                if (now < aug3) return { label: 'Program starts in', target: aug3 };
-                return null;
+                var active = activeIndex(now);
+                if (active === -1) { renderClosed(); return; }
+
+                var sell = sellableIndex(active);
+                if (sell === -1) {
+                    // Nothing is chargeable at all. Send people to the waitlist rather
+                    // than to a checkout that would take the wrong amount.
+                    renderClosed();
+                    return;
+                }
+                if (sell !== active && !warned) {
+                    warned = true;
+                    console.warn('[NMP] Tier "' + cfg.tiers[active].id + '" has no Stripe link, so the page ' +
+                        'fell back to "' + cfg.tiers[sell].id + '" at ' + cfg.tiers[sell].price + '. ' +
+                        'Add the missing link in NMP_PRICING.');
+                }
+
+                var tier = cfg.tiers[sell];
+
+                if (heroLabel) heroLabel.textContent = tier.heroLabel;
+                if (heroAmount) {
+                    heroAmount.textContent = tier.price;
+                    heroAmount.style.display = '';
+                }
+
+                for (var i = 0; i < tierEls.length; i++) {
+                    var pos = indexOfTier(tierEls[i].getAttribute('data-nmp-tier'));
+                    var state = pos < sell ? 'past' : (pos === sell ? 'current' : 'future');
+                    tierEls[i].className = 'mastery-price-tier ' + state;
+                }
+
+                setCtas(tier.link, false);
+
+                // Count down to the end of the tier we are actually selling.
+                var diff = tier.endsAt - now;
+                if (diff <= 0) {
+                    if (countdown) countdown.style.display = 'none';
+                    return;
+                }
+                if (countdown) countdown.style.display = '';
+                if (cdLabel) cdLabel.textContent = tier.countdownLabel;
+                if (cdDays) cdDays.textContent = pad(Math.floor(diff / 86400000));
+                if (cdHours) cdHours.textContent = pad(Math.floor((diff % 86400000) / 3600000));
+                if (cdMins) cdMins.textContent = pad(Math.floor((diff % 3600000) / 60000));
+                if (cdSecs) cdSecs.textContent = pad(Math.floor((diff % 60000) / 1000));
             }
 
-            function pad(n) { return n < 10 ? '0' + n : n; }
-
-            function tick() {
-                var config = getConfig();
-                if (!config) { countdown.style.display = 'none'; return; }
-                label.textContent = config.label;
-                var diff = config.target - new Date();
-                if (diff <= 0) { countdown.style.display = 'none'; return; }
-                var d = Math.floor(diff / 86400000);
-                var h = Math.floor((diff % 86400000) / 3600000);
-                var mins = Math.floor((diff % 3600000) / 60000);
-                var s = Math.floor((diff % 60000) / 1000);
-                daysEl.textContent = pad(d);
-                hoursEl.textContent = pad(h);
-                minsEl.textContent = pad(mins);
-                secsEl.textContent = pad(s);
-            }
-
-            tick();
-            setInterval(tick, 1000);
+            render();
+            setInterval(render, 1000);   // re-checks every second, so a deadline flips without a reload
         })();
     </script>
 
