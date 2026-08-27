@@ -2440,3 +2440,26 @@ html {
 .stagger-2 { animation-delay: 0.2s; }
 .stagger-3 { animation-delay: 0.3s; }
 .stagger-4 { animation-delay: 0.4s; }
+
+/* =====================================================
+   SIGNUP FORM MESSAGES
+   Inline status under the hero and footer forms, replacing the
+   browser alert() the old MailerLite handler used.
+   ===================================================== */
+
+.form-message {
+    margin: 0.9rem 0 0;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    background: rgba(247, 180, 13, 0.15);
+    border: 1px solid rgba(247, 180, 13, 0.45);
+    color: #1c1f26;
+}
+
+.form-message.is-error {
+    background: rgba(200, 40, 40, 0.08);
+    border-color: rgba(200, 40, 40, 0.35);
+    color: #8c1f1f;
+}

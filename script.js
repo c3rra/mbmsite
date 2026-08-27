@@ -31,87 +31,105 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submissions with MailerLite integration
-const MAILERLITE_API_KEY = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiN2NkYWYwN2IwNWRiOWQ1ZDNlM2VkNmUzNzVjY2NkM2FjNzBlMjA5ZWVmMDNmMDFjOTkxOTdjOGM5NzA0YjIyOTFiMzM3OTEyODEzOGM0ZWIiLCJpYXQiOjE3NTA1MTgyOTUuNTM0MzQsIm5iZiI6MTc1MDUxODI5NS41MzQzNDIsImV4cCI6NDkwNjE5MTg5NS41Mjk0NzgsInN1YiI6IjE2MTExNTkiLCJzY29wZXMiOltdfQ.i9ajFaFT6XyhggBCSdF9B8vdnDapgVjtF3mDENJCZzYnBKeNss2au7Awryc6CFUa6gk9n81YtiRWtQlI1bqHgXu17AMl_5cs7v5wYTnTnKhJvmKGqjXsa273v_YCGqZbvMSw5vXygT4liK_BboykTaBwG1BVthB_5Xo5AVgYquUorRu9NXDSvMPNVypHu28KfIM-B6JAuyN43KMy6KbwrOxctrrhmUC9CPpAyJHOleF1Jf0A7m6afFAcT-35vN6BuQhB-ZdgNlljTUTv5jv-ADmnGl62sRQJq6W0lK4pEF6DH-Zq5LooMlpp0GB0jC9W1wKQAMtVD1svry6pIz68sIyGIb7SXsefVCuLOb3AYWhsofrYw72lWzLWfmVKpiOTklDLMsmL1P0nRphNzV5z2JfDlZK2ac8Ii4sAC335ilRms7U0_ZJeV58rbKdSAyvjUICFBMQs8tN6oPiF4mItnY-I7GOPDwj8pt6JS1TrMu9JxpDel-ty7gFALp0W77wHGKluIZnBH8EyzaXwPxsXzIn1WRRgTfM4AnllFNteogibJgooHdXo67czrDKk0NnM2TO7ug1cOM4b5g6KsAn3wgvZ3g5XDA65JU7daD69Vf5oBOMWnBwLjhu3O4eX_Mf1EvDcEjC7o5i4tPbRJsPpcZq3vJBLWEI-1YlHwhkzmUw';
-const MAILERLITE_GROUP_ID = '157829220558440358';
+/* MailerLite signup forms.
+ *
+ * No API key here, and there must never be one again: this file is public,
+ * served from a public repo, so anything in it is readable by anyone.
+ *
+ * How it works instead. The forms post natively to MailerLite's public form
+ * endpoint, which needs no credentials. The response lands in a hidden iframe
+ * so the visitor never leaves the page, and the iframe's load event tells us
+ * MailerLite answered. We cannot read that response (different origin), so
+ * success here means "submitted and answered", not "definitely subscribed".
+ * MailerLite emails a confirmation either way.
+ *
+ * The markup on the six pages carrying these forms is untouched. Everything
+ * MailerLite needs — the action, its field names, its hidden fields — is
+ * applied here, which keeps all six pages consistent by construction.
+ */
+const ML_FORM_ACTION = 'https://assets.mailerlite.com/jsonp/1598170/forms/196973630175839968/subscribe';
+const ML_FRAME_NAME = 'ml-signup-frame';
 
-// Hero form submission (only runs if heroForm exists)
-const heroForm = document.getElementById('heroForm');
-if (heroForm) {
-    heroForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        const name = document.getElementById('heroName').value;
-        const email = document.getElementById('heroEmail').value;
-        
-        try {
-            const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${MAILERLITE_API_KEY}`
-                },
-                body: JSON.stringify({
-                    email: email,
-                    fields: {
-                        name: name
-                    },
-                    groups: [MAILERLITE_GROUP_ID]
-                })
-            });
-            
-            if (response.ok) {
-                alert('Thanks for subscribing to Mad Musings!');
-                heroForm.reset();
-            } else {
-                throw new Error('Subscription failed');
-            }
-            
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Something went wrong. Please try again or contact us directly.');
+function mlEnsureFrame() {
+    let frame = document.getElementById(ML_FRAME_NAME);
+    if (!frame) {
+        frame = document.createElement('iframe');
+        frame.id = ML_FRAME_NAME;
+        frame.name = ML_FRAME_NAME;
+        frame.setAttribute('aria-hidden', 'true');
+        frame.setAttribute('tabindex', '-1');
+        frame.style.cssText = 'position:absolute;width:0;height:0;border:0;left:-9999px;';
+        document.body.appendChild(frame);
+    }
+    return frame;
+}
+
+function mlWireForm(formId, nameId, emailId) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+
+    const nameInput = document.getElementById(nameId);
+    const emailInput = document.getElementById(emailId);
+    if (!nameInput || !emailInput) return;
+
+    // MailerLite expects these exact field names.
+    nameInput.name = 'fields[name]';
+    emailInput.name = 'fields[email]';
+
+    form.action = ML_FORM_ACTION;
+    form.method = 'post';
+    form.target = ML_FRAME_NAME;
+    form.setAttribute('novalidate', '');
+
+    [['ml-submit', '1'], ['anticsrf', 'true']].forEach(([key, value]) => {
+        const hidden = document.createElement('input');
+        hidden.type = 'hidden';
+        hidden.name = key;
+        hidden.value = value;
+        form.appendChild(hidden);
+    });
+
+    const message = document.createElement('p');
+    message.className = 'form-message';
+    message.setAttribute('role', 'status');
+    message.setAttribute('aria-live', 'polite');
+    message.hidden = true;
+    form.insertAdjacentElement('afterend', message);
+
+    const button = form.querySelector('button[type="submit"]');
+    const buttonLabel = button ? button.innerHTML : '';
+    let pending = false;
+
+    const frame = mlEnsureFrame();
+    frame.addEventListener('load', () => {
+        if (!pending) return;   // ignore the iframe's own initial load
+        pending = false;
+        form.reset();
+        if (button) { button.disabled = false; button.innerHTML = buttonLabel; }
+        message.hidden = false;
+        message.classList.remove('is-error');
+        message.textContent = "You're in. Check your inbox to confirm.";
+    });
+
+    form.addEventListener('submit', (e) => {
+        // Validate ourselves, since novalidate is set to stop the browser
+        // blocking submission before we can show our own message.
+        if (!form.checkValidity()) {
+            e.preventDefault();
+            message.hidden = false;
+            message.classList.add('is-error');
+            message.textContent = 'Please add your name and a valid email address.';
+            return;
         }
+        pending = true;
+        message.hidden = true;
+        if (button) { button.disabled = true; button.innerHTML = 'Joining…'; }
+        // No preventDefault: the form posts natively into the hidden iframe.
     });
 }
 
-// Footer form submission (only runs if footerForm exists)
-const footerForm = document.getElementById('footerForm');
-if (footerForm) {
-    footerForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        const name = document.getElementById('footerName').value;
-        const email = document.getElementById('footerEmail').value;
-        
-        try {
-            const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${MAILERLITE_API_KEY}`
-                },
-                body: JSON.stringify({
-                    email: email,
-                    fields: {
-                        name: name
-                    },
-                    groups: [MAILERLITE_GROUP_ID]
-                })
-            });
-            
-            if (response.ok) {
-                alert('Thanks for subscribing!');
-                footerForm.reset();
-            } else {
-                throw new Error('Subscription failed');
-            }
-            
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Something went wrong. Please try again or contact us directly.');
-        }
-    });
-}
+mlWireForm('heroForm', 'heroName', 'heroEmail');
+mlWireForm('footerForm', 'footerName', 'footerEmail');
 
 // Navbar background on scroll
 window.addEventListener('scroll', () => {
