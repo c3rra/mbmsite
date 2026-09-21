@@ -332,6 +332,14 @@ body::before {
     margin-top: 1.5rem;
 }
 
+.cta-container h1 {
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    color: #1c1f26;
+}
+
 .cta-container h2 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -2017,6 +2025,10 @@ body::before {
         width: 150px;
     }
     
+    .cta-container h1 {
+        font-size: 2.25rem;
+    }
+
     .cta-container h2,
     .services h2,
     .testimonials h2,
