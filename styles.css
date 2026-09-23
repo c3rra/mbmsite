@@ -487,13 +487,299 @@ body::before {
     margin-bottom: 1.5rem;
 }
 
-/* Services page — hero proof line and services intro */
-.cta-container .hero-proof {
-    font-size: 1rem;
-    opacity: 0.7;
-    margin-bottom: 0;
+/* Case study rows — ported from the mbm-landers proof blocks.
+   Brand variables inlined because this stylesheet has no :root tokens. */
+.proof-section {
+    padding: 2rem 2rem 6rem;
 }
 
+.proof-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.proof-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #1c1f26;
+}
+
+.testimonial-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1c1f26;
+}
+
+.testimonial-role {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1c1f26;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+.case-study-avatar {
+    display: block;
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f7b40d;
+    background: rgba(247, 180, 13, 0.15);
+}
+
+.case-study-situation {
+    font-size: 15px;
+    line-height: 1.55;
+    color: #1c1f26;
+    opacity: 0.85;
+}
+
+.case-study-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.case-study-list li {
+    position: relative;
+    padding-left: 22px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1c1f26;
+}
+
+.case-study-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f7b40d;
+}
+
+.case-study-list li strong {
+    color: #1c1f26;
+    font-weight: 700;
+}
+
+.case-study-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.case-study-row {
+    display: grid;
+    grid-template-columns: 200px 1fr 270px;
+    gap: 30px;
+    align-items: center;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.55);
+    border: 2px solid rgba(247, 180, 13, 0.5);
+    border-radius: 14px;
+    padding: 28px 30px;
+}
+
+.case-study-row-person {
+    text-align: center;
+    padding-right: 30px;
+    border-right: 4px solid rgba(247, 180, 13, 0.55);
+}
+
+.case-study-row-person .case-study-avatar {
+    margin-bottom: 14px;
+}
+
+.case-study-row-body .case-study-situation {
+    margin-bottom: 16px;
+}
+
+.case-study-row-body .case-study-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 24px;
+}
+
+.case-study-row-quote {
+    padding-left: 30px;
+    border-left: 4px solid rgba(247, 180, 13, 0.55);
+    font-size: 17px;
+    line-height: 1.55;
+    font-style: italic;
+    color: #1c1f26;
+}
+
+@media (max-width: 900px) {
+    .case-study-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .case-study-row-person {
+        padding-right: 0;
+        padding-bottom: 16px;
+        border-right: none;
+        border-bottom: 4px solid rgba(247, 180, 13, 0.55);
+    }
+
+    .case-study-row-body .case-study-list {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-row-quote {
+        padding-left: 0;
+        padding-top: 16px;
+        border-left: none;
+        border-top: 4px solid rgba(247, 180, 13, 0.55);
+    }
+
+    .proof-container h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Services section on the services page only. .services and #services are
+   both in use on index.html, so the scale-up hangs off .services-page. */
+.services-page h2 {
+    font-size: 3.25rem;
+}
+
+.services-page .services-intro {
+    max-width: 780px;
+    font-size: 1.35rem;
+}
+
+.services-page .services-intro .intro-lead {
+    font-size: 2rem;
+}
+
+.services-page .services-intro .intro-close {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .services-page h2 {
+        font-size: 2.2rem;
+    }
+
+    .services-page .services-intro {
+        font-size: 1.15rem;
+    }
+
+    .services-page .services-intro .intro-lead {
+        font-size: 1.6rem;
+    }
+
+    .services-page .services-intro .intro-close {
+        font-size: 1.3rem;
+    }
+}
+
+/* White marker swipe, for the saturated-yellow band where the yellow pill
+   would disappear. Same geometry as .heading-pill, different fill. */
+.marker-white {
+    position: relative;
+    display: inline-block;
+    isolation: isolate;
+    font-weight: 700;
+    padding: 0 0.3em;
+}
+
+.marker-white::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -0.1em;
+    right: -0.1em;
+    top: -0.12em;
+    bottom: -0.14em;
+    background: #ffffff;
+    border-radius: 0.55em 0.25em 0.5em 0.22em;
+    transform: rotate(-1.6deg);
+}
+
+/* Services intro: a lead claim, then body, then a sized-up hand-off line. */
+.services-intro .intro-lead {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1.1rem;
+}
+
+.services-intro .intro-close {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    padding-bottom: 0.12em;
+    border-bottom: 5px solid #ffffff;
+}
+
+/* Second line of a two-line heading, on a rough yellow marker pill.
+   Ported from the .marker treatment on the ICP landers: offset pseudo-element,
+   uneven radius and a slight rotation so it reads hand-drawn rather than a chip. */
+.heading-pill {
+    position: relative;
+    display: inline-block;
+    isolation: isolate;
+    color: #1c1f26;
+    margin-top: 0.18em;
+    padding: 0 0.14em;
+}
+
+.heading-pill::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -0.16em;
+    right: -0.16em;
+    top: 0.06em;
+    bottom: 0.02em;
+    background: #f7b40d;
+    border-radius: 0.35em 0.2em 0.4em 0.18em;
+    transform: rotate(-1.2deg);
+}
+
+/* Hero closing line and its CTA, sized up to carry the block.
+   Scoped so the site-wide .btn-large is untouched. */
+.hero-final {
+    font-size: 1.35rem;
+    line-height: 1.4;
+}
+
+.btn-hero {
+    padding: 1.5rem 3.25rem;
+    font-size: 1.35rem;
+    margin-top: 0.5rem;
+}
+
+/* Marker-pen highlight for a phrase in the hero. */
+.hero-highlight {
+    font-weight: 700;
+    background: linear-gradient(180deg, transparent 62%, rgba(247, 180, 13, 0.6) 62%);
+    padding: 0 5px;
+}
+
+/* The standalone highlighted line, sized up on its own row. */
+.hero-highlight-lg {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 1.55rem;
+    line-height: 1.35;
+}
+
+/* Clears the fixed navbar when the See How button scrolls here. */
+#services {
+    scroll-margin-top: 90px;
+}
+
+/* Services page — hero proof line and services intro */
 .services-intro {
     text-align: center;
     max-width: 640px;
