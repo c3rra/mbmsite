@@ -441,6 +441,22 @@ body::before {
     padding: 2rem;
     text-align: center;
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Text blocks span the card; buttons and links keep their natural width. */
+.service-card .service-what,
+.service-card .service-points,
+.service-card .service-for {
+    width: 100%;
+}
+
+/* Pushes the "for you if" line and the CTA to the bottom so buttons
+   line up across a row regardless of how long the bullets are. */
+.service-card .service-for {
+    margin-top: auto;
 }
 
 .service-card:hover {
@@ -469,6 +485,80 @@ body::before {
     opacity: 0.8;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+}
+
+/* Services page — hero proof line and services intro */
+.cta-container .hero-proof {
+    font-size: 1rem;
+    opacity: 0.7;
+    margin-bottom: 0;
+}
+
+.services-intro {
+    text-align: center;
+    max-width: 640px;
+    margin: -2rem auto 3rem auto;
+    font-size: 1.15rem;
+    color: #1c1f26;
+    opacity: 0.85;
+}
+
+/* Services page — card content structure */
+.service-card .service-what {
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.service-card .service-points {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin: 0 0 1.25rem 0;
+}
+
+.service-card .service-points li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 0.65rem;
+    line-height: 1.5;
+    color: #1c1f26;
+    opacity: 0.85;
+}
+
+.service-card .service-points li::before {
+    content: '';
+    position: absolute;
+    left: 0.35rem;
+    top: 0.6rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #1c1f26;
+    opacity: 0.55;
+}
+
+.service-card .service-for {
+    font-size: 0.95rem;
+    font-style: italic;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+.service-card .service-alt-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1c1f26;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(247, 180, 13, 0.9);
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.service-card .service-alt-link:hover {
+    color: #8a6200;
+    border-bottom-color: #8a6200;
 }
 
 .services-cta {
