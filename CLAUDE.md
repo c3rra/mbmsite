@@ -157,6 +157,31 @@ countdown wording, and the href on all 8 CTAs. Do not report it working without 
 ### Step 6: update this file.
 Refresh the Locked Copy badge, the cohort dates section, and the pricing table above.
 
+## Every page needs a link preview card
+
+**Standing instruction from Chris, 23 Sep 2026. Applies to every page built here, not
+just landing pages.** A page without an `og:image` lets the platform pick something off
+the page, which on this site means the square logo or a client headshot.
+
+The process and the design rules live in `~/Documents/mbm-landers/visuals/README-og.md`.
+Follow it rather than improvising: copy `og-card.html`, change only the headline (with
+`.key` on the word carrying the yellow underline) and the sub line, render at
+`--force-device-scale-factor=2` so the 1200x630 layout comes out 2400x1260, and set
+`og:image:width` and `og:image:height` to the rendered size rather than the layout size.
+
+Cards for this site live in `visuals/og-card-<page>.html`, rendered to
+`images/og-<page>.png`. `og:image` must be an absolute URL, and `<title>` and `og:title`
+must match, because they are the same promise.
+
+Built so far: `services` (`How we help you`).
+
+## Stylesheet cache busting
+
+`styles.css` is served with `cache-control: max-age=14400`, so a returning visitor can
+hold a four-hour-old stylesheet and see new markup styled by old CSS. Every page
+therefore links it as `styles.css?v=<date>`. **Bump that version whenever styles.css
+changes**, or the next CSS change will silently not reach people for four hours.
+
 ## Active TODOs
 No outstanding build tasks. All three tiers have verified payment links and the page
 rolls itself over on schedule through to the 1 Feb 2027 program start.

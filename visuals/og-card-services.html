@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OG card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1200px; height:630px; }
+  body {
+    background:#ffffff;
+    font-family:'Space Grotesk', system-ui, sans-serif;
+    color:#1c1f26;
+    padding:64px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:44px;
+    position:relative;
+    overflow:hidden;
+  }
+  /* Brand gradient, carried over from the page, warming the bottom-right corner
+     so the card reads as MBM at thumbnail size. */
+  body::before {
+    content:''; position:absolute; right:-200px; bottom:-260px;
+    width:820px; height:820px; border-radius:50%;
+    background:radial-gradient(circle, rgba(247,180,13,0.62) 0%, rgba(255,201,68,0.28) 42%, rgba(255,255,255,0) 70%);
+  }
+  .headline {
+    position:relative; z-index:1;
+    font-size:138px; font-weight:700; line-height:1.02; letter-spacing:-3.5px;
+  }
+  .headline .key {
+    text-decoration:underline;
+    text-decoration-color:#f7b40d;
+    text-decoration-thickness:14px;
+    text-underline-offset:14px;
+    text-decoration-skip-ink:none;
+  }
+  .sub { position:relative; z-index:1; font-size:38px; font-weight:600; opacity:0.72; }
+  .mark { position:absolute; right:56px; bottom:44px; width:104px; height:104px; object-fit:contain; z-index:1; }
+</style>
+</head>
+<body>
+  <div class="headline">How we <span class="key">help</span> you.</div>
+  <div class="sub">Newsletter strategy for founders, creators and teams</div>
+  <img class="mark" src="../mbm-logo.png" alt="">
+</body>
+</html>
