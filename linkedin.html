@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How we can help you</title>
+    <meta name="description" content="Newsletter strategy from Mad Banana Media. See what we do, or find how we can help you specifically.">
+    <!-- A router for LinkedIn profile traffic, not a page to be found by search. -->
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="https://madbananamedia.com/linkedin">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mad Banana Media">
+    <meta property="og:url" content="https://madbananamedia.com/linkedin">
+    <meta property="og:title" content="How we can help you">
+    <meta property="og:description" content="Newsletter strategy from Mad Banana Media. See what we do, or find how we can help you specifically.">
+    <meta property="og:image" content="https://madbananamedia.com/images/og-services.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20260923">
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <!-- Page-only styles. Prefixed li- so nothing leaks into the shared stylesheet. -->
+    <style>
+        .li-page {
+            max-width: 520px;
+            margin: 0 auto;
+            padding: 2.5rem 16px 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Logo and headshot side by side, so the face from the LinkedIn profile carries over. */
+        .li-brand {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.4rem;
+        }
+
+        .li-logo {
+            display: block;
+            width: 130px;
+            height: 130px;
+        }
+
+        .li-slash {
+            display: block;
+            width: 3px;
+            height: 120px;
+            border-radius: 2px;
+            background: #e6a00b;
+            transform: rotate(18deg);
+        }
+
+        .li-headshot {
+            display: block;
+            width: 112px;
+            height: 112px;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            box-shadow: 0 6px 20px rgba(28, 31, 38, 0.15);
+        }
+
+        .li-intro {
+            text-align: center;
+            font-size: clamp(1.6rem, 6vw, 2.1rem);
+            line-height: 1.25;
+            font-weight: 700;
+            margin: 0.25rem 0 1rem;
+            text-wrap: balance;
+        }
+
+        /* Each headline line balances on its own, so no word strands on a phone. */
+        .li-line {
+            display: block;
+            text-wrap: balance;
+        }
+
+        .li-intro + .li-intro-sub {
+            margin-top: -1rem;
+        }
+
+        .li-intro-sub {
+            text-align: center;
+            font-size: 1.15rem;
+            line-height: 1.4;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-wrap: balance;
+        }
+
+        /* White marker swipe, ported from .marker on the ICP landers.
+           A yellow underline disappears on this part of the gradient; white does not. */
+        .li-marker {
+            position: relative;
+            display: inline-block;
+            isolation: isolate;
+            padding: 0 0.12em;
+        }
+
+        .li-marker::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: -0.08em;
+            right: -0.08em;
+            top: 0.14em;
+            bottom: 0.06em;
+            background: #ffffff;
+            border-radius: 0.35em 0.2em 0.4em 0.18em;
+            transform: rotate(-1.2deg);
+        }
+
+        /* Marker-pen highlight that survives wrapping onto two lines on a phone. */
+        .li-mark {
+            background: linear-gradient(180deg, transparent 58%, rgba(247, 180, 13, 0.75) 58%);
+            padding: 0 0.12em;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+        }
+
+        /* Route cards: the two primary choices. */
+        .li-route {
+            display: block;
+            width: 100%;
+            padding: 1.25rem 1.4rem;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(247, 180, 13, 0.45);
+            border-radius: 14px;
+            box-shadow: 0 8px 28px rgba(31, 38, 135, 0.1);
+            color: #1c1f26;
+            text-decoration: none;
+            text-align: left;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .li-route:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(247, 180, 13, 0.35);
+        }
+
+        .li-route-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .li-route-sub {
+            display: block;
+            margin-top: 0.3rem;
+            font-size: 0.95rem;
+            color: #4a4e57;
+        }
+
+        .li-chevron {
+            flex: none;
+            width: 22px;
+            height: 22px;
+            transition: transform 0.25s ease;
+        }
+
+        /* The menu route is a <details>, so it works without JavaScript.
+           The <details> itself is the card: the header and the list sit inside one
+           box, split by a thin divider, so opening it extends the card downward. */
+        .li-menu {
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(247, 180, 13, 0.45);
+            border-radius: 14px;
+            box-shadow: 0 8px 28px rgba(31, 38, 135, 0.1);
+            overflow: hidden;
+            transition: box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .li-menu:hover {
+            box-shadow: 0 12px 32px rgba(247, 180, 13, 0.35);
+        }
+
+        .li-menu[open] {
+            background: rgba(255, 255, 255, 0.8);
+            border-color: #f7b40d;
+        }
+
+        /* The header drops its own card styling and inherits the box around it. */
+        .li-menu > summary.li-route {
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            transform: none;
+            list-style: none;
+        }
+
+        .li-menu > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .li-menu[open] .li-chevron {
+            transform: rotate(180deg);
+        }
+
+        .li-menu-body {
+            margin: 0 1.4rem;
+            padding: 1.1rem 0 1.3rem;
+            border-top: 1px solid rgba(230, 160, 11, 0.45);
+        }
+
+        .li-menu[open] .li-menu-body {
+            animation: li-drop 0.25s ease;
+        }
+
+        @keyframes li-drop {
+            from { opacity: 0; transform: translateY(-6px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .li-menu-q {
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin: 0 0 0.75rem 0.2rem;
+        }
+
+        .li-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .li-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem 1rem;
+            background: #ffffff;
+            border: 1px solid rgba(28, 31, 38, 0.1);
+            border-radius: 10px;
+            color: #1c1f26;
+            text-decoration: none;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .li-item:hover {
+            border-color: #f7b40d;
+            background: #fffaf0;
+        }
+
+        .li-item-name {
+            font-weight: 600;
+        }
+
+        .li-item-sub {
+            display: block;
+            font-size: 0.88rem;
+            color: #5a5e67;
+            margin-top: 0.1rem;
+        }
+
+        .li-arrow {
+            flex: none;
+            width: 18px;
+            height: 18px;
+            color: #e6a00b;
+        }
+
+        .li-group {
+            margin: 1.1rem 0 0.6rem 0.2rem;
+        }
+
+        .li-group-name {
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .li-group-sub {
+            display: block;
+            font-size: 0.92rem;
+            color: #4a4e57;
+            margin-top: 0.15rem;
+        }
+
+        .li-other {
+            margin-top: 1rem;
+        }
+
+        /* NMP: a quieter third option, collapsed until asked for. */
+        .li-nmp-menu {
+            margin-top: 1rem;
+        }
+
+        .li-nmp-menu .li-route-title {
+            font-size: 1.05rem;
+        }
+
+        .li-nmp-hook {
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1.35;
+            text-wrap: balance;
+        }
+
+        .li-nmp-sub {
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+            color: #4a4e57;
+        }
+
+        /* Chris's /// paragraph break between the two NMP lines. */
+        .li-nmp-sub + .li-nmp-sub {
+            margin-top: 0.9rem;
+        }
+
+        .li-nmp-btn {
+            margin-top: 1rem;
+            padding: 0.8rem 1.4rem;
+            border-radius: 10px;
+        }
+
+        /* The shortcut to a call. Dark, so it stands off the yellow end of the gradient. */
+        .li-call-lead {
+            margin-top: 1.75rem;
+            text-align: center;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .li-call {
+            display: block;
+            margin: 0.6rem auto 0;
+            text-align: center;
+            background: #1c1f26;
+            color: #ffffff;
+            box-shadow: 0 10px 28px rgba(28, 31, 38, 0.28);
+        }
+
+        .li-call:hover {
+            background: #2a2e38;
+            color: #ffc944;
+            box-shadow: 0 14px 34px rgba(28, 31, 38, 0.35);
+        }
+
+        .li-foot {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #4a4e57;
+        }
+
+        .li-foot a {
+            color: inherit;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .li-route, .li-chevron, .li-menu[open] .li-menu-body {
+                transition: none;
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body data-gtm="GTM-TBKWRFGD">
+
+    <!--
+        LinkedIn profile hub, live at madbananamedia.com/linkedin.
+
+        Every outbound link carries utm_source=linkedin & utm_medium=profile,
+        plus utm_content naming the button, so Cal.com bookings and page
+        analytics can show which route a visitor took.
+
+        Adding a creator page: copy one <li> in the Creators list, change the
+        subdomain, the name and utm_content.
+    -->
+
+    <main class="li-page">
+
+        <div class="li-brand">
+            <img class="li-logo" src="images/mbm-logo-wordmark-400.webp" width="130" height="130" alt="Mad Banana Media">
+            <span class="li-slash" aria-hidden="true"></span>
+            <img class="li-headshot" src="images/chriscerra-320.webp" width="112" height="112" alt="Chris Cerra">
+        </div>
+
+        <h1 class="li-intro"><span class="li-marker">You clicked!</span></h1>
+        <p class="li-intro-sub">LinkedIn is fun, but here's where the party's at.</p>
+
+        <a class="li-route" href="https://madbananamedia.com/services?utm_source=linkedin&amp;utm_medium=profile&amp;utm_content=what-we-do">
+            <span class="li-route-title">
+                See what we do
+                <svg class="li-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
+            </span>
+            <span class="li-route-sub">One-time course corrections, ongoing delivery, and more.<br>See the full menu.</span>
+        </a>
+
+        <details class="li-menu">
+            <summary class="li-route">
+                <span class="li-route-title">
+                    See how we can help you
+                    <svg class="li-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg>
+                </span>
+                <span class="li-route-sub">From B2B SaaS, to YouTubers, we got you covered.</span>
+            </summary>
+
+            <div class="li-menu-body">
+                <ul class="li-list">
+                    <li>
+                        <!-- TEMPORARY: points at /services until the B2B services lander exists. Swap the href then. -->
+                        <a class="li-item" href="https://madbananamedia.com/services?utm_source=linkedin&amp;utm_medium=profile&amp;utm_content=b2b-services">
+                            <span><span class="li-item-name">B2B services</span><span class="li-item-sub">Founders and marketing teams</span></span>
+                            <svg class="li-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="li-item" href="https://aviationoperators.madbananamedia.com/?utm_source=linkedin&amp;utm_medium=profile&amp;utm_content=aviation-businesses">
+                            <span><span class="li-item-name">Aviation businesses</span><span class="li-item-sub">Flight schools</span></span>
+                            <svg class="li-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="li-item" href="https://motorsport.madbananamedia.com/?utm_source=linkedin&amp;utm_medium=profile&amp;utm_content=motorsport">
+                            <span><span class="li-item-name">Motorsport</span><span class="li-item-sub">Drivers and managers</span></span>
+                            <svg class="li-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="li-item" href="https://podcasts.madbananamedia.com/?utm_source=linkedin&amp;utm_medium=profile&amp;utm_content=podcasts">
+                            <span><span class="li-item-name">Podcasts</span><span class="li-item-sub">Hosts and networks</span></span>
+                            <svg class="li-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="li-item" href="https://comedyclubs.madbananamedia.com/?utm_source=linkedin&amp;utm_medium=profile&amp;utm_content=comedy-clubs">
+                            <span><span class="li-item-name">Comedy clubs</span><span class="li-item-sub">Clubs and venues</span></span>
+                            <svg class="li-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="li-group">
+                    <span class="li-group-name">Content creators</span>
+                    <span class="li-group-sub">What's your niche?</span>
+                </p>
+
+                <ul class="li-list">
+                    <li>
+                        <a class="li-item" href="https://travel.madbananamedia.com/?utm_source=linkedin&amp;utm_medium=profile&amp;utm_content=creators-travel">
+                            <span class="li-item-name">Travel</span>
+                            <svg class="li-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="li-item" href="https://aviationcreators.madbananamedia.com/?utm_source=linkedin&amp;utm_medium=profile&amp;utm_content=creators-aviation">
+                            <span class="li-item-name">Aviation</span>
+                            <svg class="li-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="li-list li-other">
+                    <li>
+                        <a class="li-item" href="https://madbananamedia.com/services?utm_source=linkedin&amp;utm_medium=profile&amp;utm_content=something-else">
+                            <span class="li-item-name">Something else?</span>
+                            <svg class="li-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="li-menu li-nmp-menu">
+            <summary class="li-route">
+                <span class="li-route-title">
+                    Heard about the Newsletter Mastery Program? 😎
+                    <svg class="li-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg>
+                </span>
+            </summary>
+
+            <div class="li-menu-body li-nmp-body">
+                <p class="li-nmp-hook">What if your newsletter made <span class="li-mark">(serious) money?</span></p>
+                <p class="li-nmp-sub">The 4-week live online cohort to transform your newsletter.</p>
+                <p class="li-nmp-sub">Our guidance, your implementation, true newsletter mastery.</p>
+                <a class="btn li-nmp-btn" href="https://madbananamedia.com/newslettermasteryprogram?utm_source=linkedin&amp;utm_medium=profile&amp;utm_content=nmp">Find out more</a>
+            </div>
+        </details>
+
+        <p class="li-call-lead">Or skip all that.</p>
+        <a class="btn btn-large li-call" href="https://cal.com/mad-banana-media-ojblzk/1-2-1?utm_source=linkedin&amp;utm_medium=profile&amp;utm_content=book-a-call">Book a call with me</a>
+
+        <footer class="li-foot">
+            <p>&copy; 2026 Mad Banana Media &middot; <a href="privacy.html">Privacy</a></p>
+        </footer>
+
+    </main>
+
+    <script src="consent.js"></script>
+</body>
+</html>
