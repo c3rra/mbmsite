@@ -142,6 +142,30 @@ body::before {
     width: 100%;
 }
 
+
+/* Nav call-to-action: same treatment as the lander header button */
+.nav-menu a.nav-cta {
+    background: #f7b40d;
+    color: #1c1f26;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    box-shadow: 0 4px 15px rgba(247, 180, 13, 0.3);
+    transition: all 0.3s ease;
+}
+
+.nav-menu a.nav-cta::after {
+    display: none;
+}
+
+.nav-menu a.nav-cta:hover {
+    background: #e0a20b;
+    color: #1c1f26;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(247, 180, 13, 0.4);
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
