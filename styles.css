@@ -305,6 +305,70 @@ body::before {
     align-items: center;
 }
 
+
+/* Home hero: masonry of lander mockups filling the right half, fading in from the left */
+.hero { overflow: hidden; }
+
+.hero-mosaic {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: -40px;
+    display: flex;
+    gap: 10px;
+    padding-left: 8px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 10%, #000 24%);
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 10%, #000 24%);
+    animation: mosaicIn 1.4s ease-out both;
+}
+
+.hero-col {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-col-1 { margin-top: -30px; }
+.hero-col-2 { margin-top: -190px; }
+.hero-col-3 { margin-top: -90px; }
+.hero-col-4 { margin-top: -250px; }
+
+.hero-col img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes mosaicIn {
+    from { opacity: 0; transform: translateX(-24px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-mosaic { animation: none; }
+}
+
+@media (max-width: 768px) {
+    .hero { flex-direction: column; align-items: stretch; }
+    .hero-mosaic {
+        position: relative;
+        left: auto;
+        right: auto;
+        height: 340px;
+        margin: 1.5rem -2rem 0;
+        padding: 0 16px;
+        -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
+        mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
+    }
+    .hero-col-4 { display: none; }
+    .hero-col-1, .hero-col-2, .hero-col-3 { margin-top: 0; }
+    .hero-col-2 { margin-top: -160px; }
+}
+
 .logo-container {
     width: 300px;
     height: 300px;
