@@ -224,8 +224,33 @@ body::before {
     margin-bottom: 1rem;
 }
 
-.hero-content .contact-link {
-    max-width: 460px;
+/* Primary and secondary hero buttons side by side */
+.hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.hero-actions .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.hero-actions .btn-outline {
+    color: #1c1f26;
+    border: 2px solid #f7b40d;
+    padding-top: calc(1rem - 2px);
+    padding-bottom: calc(1rem - 2px);
+}
+
+.hero-actions .btn-outline:hover {
+    background: #f7b40d;
+    color: #1c1f26;
 }
 
 .hero-content .hero-form-intro {
@@ -323,6 +348,10 @@ body::before {
     align-items: center;
 }
 
+
+@media (max-width: 420px) {
+    .hero-actions { grid-template-columns: 1fr; }
+}
 
 /* Home hero: masonry of lander mockups filling the right half, fading in from the left */
 .hero { overflow: hidden; }
