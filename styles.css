@@ -218,8 +218,26 @@ body::before {
 }
 
 .hero-form {
-    padding: 2rem;
+    max-width: 460px;
+    padding: 1.75rem 2rem 2rem;
+    margin-top: 2.25rem;
     margin-bottom: 1rem;
+}
+
+.hero-content .contact-link {
+    max-width: 460px;
+}
+
+.hero-content .hero-form-intro {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    opacity: 0.9;
+}
+
+.hero-form .form-group input {
+    padding: 0.85rem 1rem;
 }
 
 .form-group {
