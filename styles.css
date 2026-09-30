@@ -353,6 +353,58 @@ body::before {
     .hero-actions { grid-template-columns: 1fr; }
 }
 
+/* About section: a lead card across the top, two supporting cards beneath */
+.about-section .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.about-section .service-card {
+    padding: 2.25rem 2rem 2.5rem;
+    min-height: 32rem;
+}
+
+.about-section .service-card p {
+    margin: 0 0 1rem;
+    line-height: 1.55;
+    max-width: 34rem;
+}
+
+.about-section .service-card p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Pinned to the foot of the card so it reads as attached to the card, not the text. */
+.about-section .service-card .btn {
+    margin-top: auto;
+}
+
+.about-section .service-card p:last-of-type + .btn {
+    margin-top: auto;
+}
+
+@media (max-width: 900px) {
+    .about-section .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    /* Stacked order: What We Believe, Who We Do It For, What We Do */
+    .about-section .services-grid .service-card:nth-child(1) { order: 1; }
+    .about-section .services-grid .service-card:nth-child(3) { order: 2; }
+    .about-section .services-grid .service-card:nth-child(2) { order: 3; }
+
+    /* Cards size to their text on mobile; the desktop min-height is only for the row. */
+    .about-section .service-card {
+        min-height: 0;
+        padding: 1.75rem 1.5rem;
+    }
+
+    .about-section .service-card .btn,
+    .about-section .service-card p:last-of-type + .btn {
+        margin-top: 1.75rem;
+    }
+}
+
 /* Home hero: masonry of lander mockups filling the right half, fading in from the left */
 .hero { overflow: hidden; }
 
