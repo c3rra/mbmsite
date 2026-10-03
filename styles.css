@@ -349,7 +349,7 @@ body::before {
 }
 
 
-@media (max-width: 420px) {
+@media (max-width: 768px) {
     .hero-actions { grid-template-columns: 1fr; }
 }
 
@@ -415,6 +415,13 @@ body::before {
     margin: 0 -0.06em;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+}
+
+/* Emoji in the Join The Club buttons. Margin rather than a space, because a leading
+   space collapses when the button is a flex container. */
+.btn-emoji {
+    display: inline-block;
+    margin-left: 0.4em;
 }
 
 /* Copy that reads differently on phones, to avoid an awkward wrap. */
@@ -517,7 +524,6 @@ body::before {
 
     .hero-col img.hero-dup { display: none; }
 
-    .btn-emoji { display: none; }
 }
 
 .logo-container {
