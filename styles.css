@@ -405,6 +405,18 @@ body::before {
     }
 }
 
+/* Hero headline: thick marker underline, tight to the text, text sits on top.
+   Explicit text colour because the h1 itself uses a clipped-gradient text fill. */
+.hero-underline {
+    -webkit-text-fill-color: #1c1f26;
+    color: #1c1f26;
+    background: linear-gradient(to bottom, transparent 58%, #f7b40d 58%, #f7b40d 93%, transparent 93%);
+    padding: 0 0.06em;
+    margin: 0 -0.06em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
 /* Home hero: masonry of lander mockups filling the right half, fading in from the left */
 .hero { overflow: hidden; }
 
@@ -455,21 +467,49 @@ body::before {
 
 @media (max-width: 768px) {
     .hero { flex-direction: column; align-items: stretch; }
+    .hero-container { grid-template-columns: minmax(0, 1fr); }
+
+    /* Swipeable row: one phone at a time, the next peeking in. */
     .hero-mosaic {
         position: relative;
-        left: auto;
         right: auto;
-        height: 340px;
-        margin: 1.5rem -2rem 0;
-        padding: 0 16px;
-        -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
-        mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
-        -webkit-mask-composite: source-over;
-        mask-composite: add;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 12px;
+        height: 380px;
+        width: 100vw;
+        left: auto;
+        transform: none;
+        animation: none;
+        margin: 1.5rem calc(50% - 50vw) 0;
+        padding: 0 calc((100vw - 250px) / 2);
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%), linear-gradient(to bottom, #000 0%, #000 66%, transparent 100%);
+        -webkit-mask-composite: source-in;
+        mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%), linear-gradient(to bottom, #000 0%, #000 66%, transparent 100%);
+        mask-composite: intersect;
     }
-    .hero-col-4 { display: none; }
-    .hero-col-1, .hero-col-2, .hero-col-3 { margin-top: 0; }
-    .hero-col-2 { margin-top: -160px; }
+
+    .hero-mosaic::-webkit-scrollbar { display: none; }
+
+    .hero-col { display: contents; }
+
+    .hero-col img {
+        flex: 0 0 auto;
+        width: 250px;
+        height: auto;
+        order: var(--m, 99);
+        scroll-snap-align: center;
+    }
+
+    .hero-col img.hero-dup { display: none; }
+
+    .btn-emoji { display: none; }
 }
 
 .logo-container {
