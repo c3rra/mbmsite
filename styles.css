@@ -417,6 +417,14 @@ body::before {
     box-decoration-break: clone;
 }
 
+/* Copy that reads differently on phones, to avoid an awkward wrap. */
+.txt-mobile { display: none; }
+
+@media (max-width: 768px) {
+    .txt-desktop { display: none; }
+    .txt-mobile { display: inline; }
+}
+
 /* Home hero: masonry of lander mockups filling the right half, fading in from the left */
 .hero { overflow: hidden; }
 
