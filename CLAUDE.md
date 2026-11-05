@@ -16,7 +16,6 @@ Direct, no-nonsense, conversational. Short punchy sentences, second person, arro
 
 ## Locked Copy (do not change without being asked)
 - H1: "What if your newsletter made (serious) money?"
-- H2: "And only took 2hrs a week?"
 - CTA: "Join The Program →"
 - Scarcity badge: "FEB 1–26 - MAX 6 SEATS - JOIN NOW"
 
