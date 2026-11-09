@@ -172,7 +172,7 @@ Cards for this site live in `visuals/og-card-<page>.html`, rendered to
 `images/og-<page>.png`. `og:image` must be an absolute URL, and `<title>` and `og:title`
 must match, because they are the same promise.
 
-Built so far: `services` (`How we help you`).
+Built so far: `home` (`Take back control of your audience`), `services` (`How we help you`), `team` (`Meet the team (of one)`).
 
 ## Stylesheet cache busting
 
