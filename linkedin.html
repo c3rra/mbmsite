@@ -145,6 +145,24 @@
             box-shadow: 0 12px 32px rgba(247, 180, 13, 0.35);
         }
 
+        /* Featured card (the Power Hour): solid yellow edge and a soft pulsing glow,
+           so it reads as the headline offer rather than one route among several. */
+        .li-route.li-featured {
+            background: rgba(255, 255, 255, 0.85);
+            border: 2px solid #f7b40d;
+            box-shadow: 0 0 0 4px rgba(247, 180, 13, 0.18), 0 0 30px rgba(247, 180, 13, 0.6);
+            animation: li-glow 2.6s ease-in-out infinite;
+        }
+
+        .li-route.li-featured:hover {
+            box-shadow: 0 0 0 5px rgba(247, 180, 13, 0.28), 0 0 40px rgba(247, 180, 13, 0.85);
+        }
+
+        @keyframes li-glow {
+            0%, 100% { box-shadow: 0 0 0 4px rgba(247, 180, 13, 0.18), 0 0 24px rgba(247, 180, 13, 0.5); }
+            50%      { box-shadow: 0 0 0 6px rgba(247, 180, 13, 0.28), 0 0 40px rgba(247, 180, 13, 0.85); }
+        }
+
         .li-route-title {
             display: flex;
             justify-content: space-between;
@@ -364,7 +382,7 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .li-route, .li-chevron, .li-menu[open] .li-menu-body {
+            .li-route, .li-route.li-featured, .li-chevron, .li-menu[open] .li-menu-body {
                 transition: none;
                 animation: none;
             }
@@ -395,7 +413,7 @@
         <h1 class="li-intro"><span class="li-marker">You clicked!</span></h1>
         <p class="li-intro-sub">LinkedIn is fun, but here's where the party's at.</p>
 
-        <a class="li-route" href="https://calendar.app.google/K6DLYnVCVL3SimVC7">
+        <a class="li-route li-featured" href="https://calendar.app.google/K6DLYnVCVL3SimVC7">
             <span class="li-route-title">
                 Book a Newsletter Power Hour
                 <svg class="li-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
@@ -509,7 +527,7 @@
         </details>
 
         <p class="li-call-lead">Or skip all that.</p>
-        <a class="btn btn-large li-call" href="https://cal.com/mad-banana-media-ojblzk/1-2-1?utm_source=linkedin&amp;utm_medium=profile&amp;utm_content=book-a-call">Book a call with me</a>
+        <a class="btn btn-large li-call" href="https://cal.com/mad-banana-media-ojblzk/1-2-1?utm_source=linkedin&amp;utm_medium=profile&amp;utm_content=book-a-call">Get my help</a>
 
         <footer class="li-foot">
             <p>&copy; <span id="copyright-year">2026</span><script>document.getElementById('copyright-year').textContent=new Date().getFullYear()</script> Mad Banana Media &middot; <a href="privacy.html">Privacy</a></p>
