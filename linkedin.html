@@ -208,13 +208,19 @@
             box-shadow: 0 12px 32px rgba(247, 180, 13, 0.35);
         }
 
-        .li-menu[open] {
+        .li-menu[open], .li-menu-static {
             background: rgba(255, 255, 255, 0.8);
             border-color: #f7b40d;
         }
 
+        /* "See how we can help you" is always open: a plain card, not a toggle,
+           so every visitor sees the full list without clicking. */
+        .li-menu-static > .li-route {
+            cursor: default;
+        }
+
         /* The header drops its own card styling and inherits the box around it. */
-        .li-menu > summary.li-route {
+        .li-menu > summary.li-route, .li-menu > div.li-route {
             background: transparent;
             backdrop-filter: none;
             -webkit-backdrop-filter: none;
@@ -433,14 +439,11 @@
             <span class="li-route-sub">One-time course corrections, ongoing delivery, and more.<br>See the full menu.</span>
         </a>
 
-        <details class="li-menu">
-            <summary class="li-route">
-                <span class="li-route-title">
-                    See how we can help you
-                    <svg class="li-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg>
-                </span>
+        <div class="li-menu li-menu-static">
+            <div class="li-route">
+                <span class="li-route-title">See how we can help you</span>
                 <span class="li-route-sub">From B2B SaaS, to YouTubers, we got you covered.</span>
-            </summary>
+            </div>
 
             <div class="li-menu-body">
                 <ul class="li-list">
@@ -512,7 +515,7 @@
                     </li>
                 </ul>
             </div>
-        </details>
+        </div>
 
         <details class="li-menu li-nmp-menu">
             <summary class="li-route">
