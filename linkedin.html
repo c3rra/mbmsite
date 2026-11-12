@@ -148,19 +148,23 @@
         /* Featured card (the Power Hour): solid yellow edge and a soft pulsing glow,
            so it reads as the headline offer rather than one route among several. */
         .li-route.li-featured {
-            background: rgba(255, 255, 255, 0.85);
-            border: 2px solid #f7b40d;
-            box-shadow: 0 0 0 4px rgba(247, 180, 13, 0.18), 0 0 30px rgba(247, 180, 13, 0.6);
-            animation: li-glow 2.6s ease-in-out infinite;
+            background: linear-gradient(135deg, #f7b40d, #ffc944);
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 0 3px rgba(240, 140, 0, 0.35), 0 0 34px rgba(240, 140, 0, 0.65);
+            animation: li-glow 2.4s ease-in-out infinite;
+        }
+
+        .li-route.li-featured .li-route-sub {
+            color: #1c1f26;
         }
 
         .li-route.li-featured:hover {
-            box-shadow: 0 0 0 5px rgba(247, 180, 13, 0.28), 0 0 40px rgba(247, 180, 13, 0.85);
+            box-shadow: 0 0 0 4px rgba(240, 140, 0, 0.5), 0 0 48px rgba(240, 140, 0, 0.9);
         }
 
         @keyframes li-glow {
-            0%, 100% { box-shadow: 0 0 0 4px rgba(247, 180, 13, 0.18), 0 0 24px rgba(247, 180, 13, 0.5); }
-            50%      { box-shadow: 0 0 0 6px rgba(247, 180, 13, 0.28), 0 0 40px rgba(247, 180, 13, 0.85); }
+            0%, 100% { box-shadow: 0 0 0 3px rgba(240, 140, 0, 0.3), 0 0 26px rgba(240, 140, 0, 0.55); }
+            50%      { box-shadow: 0 0 0 5px rgba(240, 140, 0, 0.45), 0 0 48px rgba(240, 140, 0, 0.9); }
         }
 
         .li-route-title {
